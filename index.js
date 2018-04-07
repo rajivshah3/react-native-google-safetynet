@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNGoogleSafetynet } = NativeModules;
+const { RNGoogleSafetyNet } = NativeModules;
 
-export default RNGoogleSafetynet;
+export default RNGoogleSafetyNet;

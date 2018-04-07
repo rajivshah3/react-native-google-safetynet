@@ -22,18 +22,18 @@ import com.google.android.gms.tasks.Task;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 
-public class RNGoogleSafetynetModule extends ReactContextBaseJavaModule {
+public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNGoogleSafetynetModule(ReactApplicationContext reactContext) {
+  public RNGoogleSafetyNetModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @Override
   public String getName() {
-    return "RNGoogleSafetynet";
+    return "RNGoogleSafetyNet";
   }
 
   /**

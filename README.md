@@ -15,8 +15,8 @@
 #### Android
 
 1. Open up `android/app/src/main/java/[...]/MainActivity.java`
-  - Add `import com.rajivshah.safetynet.RNGoogleSafetynetPackage;` to the imports at the top of the file
-  - Add `new RNGoogleSafetynetPackage()` to the list returned by the `getPackages()` method
+  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file
+  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method
 2. Append the following lines to `android/settings.gradle`:
   	```
   	include ':react-native-google-safetynet'
@@ -30,9 +30,9 @@
 
 ## Usage
 ```javascript
-import RNGoogleSafetynet from 'react-native-google-safetynet';
+import RNGoogleSafetyNet from 'react-native-google-safetynet';
 
 // TODO: What to do with the module?
-RNGoogleSafetynet;
+RNGoogleSafetyNet;
 ```
   

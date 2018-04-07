@@ -10,10 +10,10 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.facebook.react.bridge.JavaScriptModule;
-public class RNGoogleSafetynetPackage implements ReactPackage {
+public class RNGoogleSafetyNetPackage implements ReactPackage {
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
-      return Arrays.<NativeModule>asList(new RNGoogleSafetynetModule(reactContext));
+      return Arrays.<NativeModule>asList(new RNGoogleSafetyNetModule(reactContext));
     }
 
     // Deprecated from RN 0.47
