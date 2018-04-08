@@ -84,7 +84,8 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @method verifyAttestationResponse
  * @param  {Uint8Array} nonce    Nonce originally provided to sendAttestationRequest
  * @param  {Object} response Response from sendAttestationRequest
- * @return {Promise | Error}
+ * @return {Promise}
+ * @throws {Error}
  */
 export function verifyAttestationResponse(nonce, response) {
   const nonceString = Utf8ArrayToStr(nonce);
@@ -101,7 +102,8 @@ export function verifyAttestationResponse(nonce, response) {
  * @method sendAndVerifyAttestation
  * @param  {Uint8Array} nonce  Randomly generated nonce
  * @param  {String} apiKey API key from Google APIs
- * @return {Promise | Error}
+ * @return {Promise}
+ * @throws {Error}
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey)

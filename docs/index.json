@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "\nimport { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n  return generateSecureRandom(length);\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} nonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @return {Promise | Error}\n */\nexport function verifyAttestationResponse(nonce, response) {\n  const nonceString = Utf8ArrayToStr(nonce);\n  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n    return Promise.resolve();\n  }\n  else {\n    throw new Error(\"Verification failed\");\n  }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise | Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey)\n    .then(function(originalNonce, response) {\n      return verifyAttestationResponse(originalNonce, response);\n    })\n    .catch(function(e) {\n      return e;\n    });\n};\n\nexport default RNGoogleSafetyNet;\n",
+    "content": "\nimport { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n  return generateSecureRandom(length);\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} nonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(nonce, response) {\n  const nonceString = Utf8ArrayToStr(nonce);\n  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n    return Promise.resolve();\n  }\n  else {\n    throw new Error(\"Verification failed\");\n  }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey)\n    .then(function(originalNonce, response) {\n      return verifyAttestationResponse(originalNonce, response);\n    })\n    .catch(function(e) {\n      return e;\n    });\n};\n\nexport default RNGoogleSafetyNet;\n",
     "static": true,
     "longname": "/Users/rajiv/google-safetynet/src/index.js",
     "access": "public",
@@ -734,7 +734,7 @@
     "importPath": "react-native-google-safetynet/src/index.js",
     "importStyle": "{verifyAttestationResponse}",
     "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-    "lineNumber": 47,
+    "lineNumber": 48,
     "unknown": [
       {
         "tagName": "@method",
@@ -766,12 +766,19 @@
     "return": {
       "nullable": null,
       "types": [
-        "Promise ",
-        " Error"
+        "Promise"
       ],
       "spread": false,
       "description": ""
-    }
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": ""
+      }
+    ]
   },
   {
     "__docId__": 54,
@@ -787,7 +794,7 @@
     "importPath": "react-native-google-safetynet/src/index.js",
     "importStyle": "{sendAndVerifyAttestation}",
     "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-    "lineNumber": 64,
+    "lineNumber": 66,
     "unknown": [
       {
         "tagName": "@method",
@@ -819,12 +826,19 @@
     "return": {
       "nullable": null,
       "types": [
-        "Promise ",
-        " Error"
+        "Promise"
       ],
       "spread": false,
       "description": ""
-    }
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": ""
+      }
+    ]
   },
   {
     "__docId__": 55,
@@ -877,7 +891,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.0.3\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\"\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.0.4\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\"\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
     "longname": "/Users/rajiv/google-safetynet/package.json",
     "name": "package.json",
     "static": true,

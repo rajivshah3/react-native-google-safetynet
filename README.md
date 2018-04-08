@@ -1,5 +1,5 @@
 
-# react-native-google-safetynet
+# SafetyNet for React Native
 
 ## Getting started
 
@@ -33,6 +33,9 @@ or
 
 
 ## Usage
+
+See the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)
+
 ```javascript
 import RNGoogleSafetyNet from 'react-native-google-safetynet';
 
