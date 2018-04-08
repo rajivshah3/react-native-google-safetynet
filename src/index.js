@@ -51,9 +51,8 @@ export function verifyAttestationResponse(originalNonce, response) {
     const nonceString = Utf8ArrayToStr(originalNonce);
     if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
         return Promise.resolve();
-    } else {
-        throw new Error('Verification failed');
     }
+    throw new Error('Verification failed');
 }
 
 /**
@@ -66,12 +65,8 @@ export function verifyAttestationResponse(originalNonce, response) {
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
     return sendAttestationRequest(nonce, apiKey)
-        .then(function(originalNonce, response) {
-            return verifyAttestationResponse(originalNonce, response);
-        })
-        .catch(function(e) {
-            return e;
-        });
+        .then((originalNonce, response) => verifyAttestationResponse(originalNonce, response))
+        .catch((e) => e);
 }
 
 export default RNGoogleSafetyNet;
