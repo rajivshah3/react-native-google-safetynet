@@ -6,6 +6,36 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
+    "react-native-google-safetynet/src/index.js~generatenonce",
+    "function/index.html#static-function-generateNonce",
+    "<span>generateNonce</span> <span class=\"search-result-import-path\">react-native-google-safetynet/src/index.js</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet/src/index.js~isplayservicesavailable",
+    "function/index.html#static-function-isPlayServicesAvailable",
+    "<span>isPlayServicesAvailable</span> <span class=\"search-result-import-path\">react-native-google-safetynet/src/index.js</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet/src/index.js~sendandverifyattestation",
+    "function/index.html#static-function-sendAndVerifyAttestation",
+    "<span>sendAndVerifyAttestation</span> <span class=\"search-result-import-path\">react-native-google-safetynet/src/index.js</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet/src/index.js~sendattestationrequest",
+    "function/index.html#static-function-sendAttestationRequest",
+    "<span>sendAttestationRequest</span> <span class=\"search-result-import-path\">react-native-google-safetynet/src/index.js</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet/src/index.js~verifyattestationresponse",
+    "function/index.html#static-function-verifyAttestationResponse",
+    "<span>verifyAttestationResponse</span> <span class=\"search-result-import-path\">react-native-google-safetynet/src/index.js</span>",
+    "function"
+  ],
+  [
     "src/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
     "src/.external-ecmascript.js~Array",
@@ -286,6 +316,12 @@ window.esdocSearchIndex = [
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
     "src/.external-ecmascript.js~undefined",
     "external"
+  ],
+  [
+    "src/index.js",
+    "file/src/index.js.html",
+    "src/index.js",
+    "file"
   ],
   [
     "src/utils.js",

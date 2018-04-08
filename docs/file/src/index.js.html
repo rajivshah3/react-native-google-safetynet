@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | react-native-google-safetynet</title>
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/index.js | react-native-google-safetynet</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -39,27 +39,83 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="react-native-google-safetynet">react-native-google-safetynet</h1><h2 id="getting-started">Getting started</h2><p><code>$ npm install react-native-google-safetynet --save</code></p>
-<p>or</p>
-<p><code>$ yarn add react-native-google-safetynet</code></p>
-<h3 id="mostly-automatic-installation">Mostly automatic installation</h3><p><code>$ react-native link react-native-google-safetynet</code></p>
-<h3 id="manual-installation">Manual installation</h3><h4 id="android">Android</h4><ol>
-<li>Open up <code>android/app/src/main/java/[...]/MainActivity.java</code><ul>
-<li>Add <code>import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;</code> to the imports at the top of the file</li>
-<li>Add <code>new RNGoogleSafetyNetPackage()</code> to the list returned by the <code>getPackages()</code> method</li>
-</ul>
-</li>
-<li>Append the following lines to <code>android/settings.gradle</code>:<pre><code><code class="source-code prettyprint">   include &apos;:react-native-google-safetynet&apos;
-   project(&apos;:react-native-google-safetynet&apos;).projectDir = new File(rootProject.projectDir,     &apos;../node_modules/react-native-google-safetynet/android&apos;)</code>
-</code></pre></li>
-<li>Insert the following lines inside the dependencies block in <code>android/app/build.gradle</code>:<pre><code><code class="source-code prettyprint">   compile project(&apos;:react-native-google-safetynet&apos;)</code>
-</code></pre></li>
-</ol>
-<h2 id="usage">Usage</h2><pre><code class="lang-javascript"><code class="source-code prettyprint">import RNGoogleSafetyNet from &apos;react-native-google-safetynet&apos;;
+<div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
+import { NativeModules } from &apos;react-native&apos;;
+import { generateSecureRandom } from &apos;react-native-securerandom&apos;;
+import { Utf8ArrayToStr } from &apos;./utils&apos;;
 
-// TODO: What to do with the module?</code>
+const { RNGoogleSafetyNet } = NativeModules;
+
+/**
+ * Checks if Google Play Services is available and up to date
+ * @method isPlayServicesAvailable
+ * @return {Promise}
+ */
+export function isPlayServicesAvailable() {
+  return RNGoogleSafetyNet.isPlayServicesAvailable();
+}
+
+/**
+ * Generate the nonce using react-native-securerandom
+ * @method generateNonce
+ * @param  {int} length
+ * @return  {Promise}
+ */
+export function generateNonce(length) {
+  return generateSecureRandom(length);
+};
+
+/**
+ * Send the attestation request
+ * @method sendAttestationRequest
+ * @param  {Uint8Array} nonce   Randomly generated nonce
+ * @param  {String} apiKey  API key from Google APIs
+ * @return {Promise}
+ */
+export function sendAttestationRequest(nonce, apiKey) {
+  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
+}
+
+/**
+ * Verify the attestation response
+ * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true
+ * If any of those conditions are not met, an error is thrown
+ * @method verifyAttestationResponse
+ * @param  {Uint8Array} nonce    Nonce originally provided to sendAttestationRequest
+ * @param  {Object} response Response from sendAttestationRequest
+ * @return {Promise | Error}
+ */
+export function verifyAttestationResponse(nonce, response) {
+  const nonceString = Utf8ArrayToStr(nonce);
+  if (nonceString === response.nonce &amp;&amp; response.ctsProfileMatch &amp;&amp; response.basicIntegrity) {
+    return Promise.resolve();
+  }
+  else {
+    throw new Error(&quot;Verification failed&quot;);
+  }
+}
+
+/**
+ * Wrapper for sendAttestationRequest and verifyAttestationResponse
+ * @method sendAndVerifyAttestation
+ * @param  {Uint8Array} nonce  Randomly generated nonce
+ * @param  {String} apiKey API key from Google APIs
+ * @return {Promise | Error}
+ */
+export function sendAndVerifyAttestation(nonce, apiKey) {
+  return sendAttestationRequest(nonce, apiKey)
+    .then(function(originalNonce, response) {
+      return verifyAttestationResponse(originalNonce, response);
+    })
+    .catch(function(e) {
+      return e;
+    });
+};
+
+export default RNGoogleSafetyNet;
 </code></pre>
-</div>
+
 </div>
 
 <footer class="footer">

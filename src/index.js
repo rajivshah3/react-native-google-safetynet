@@ -10,9 +10,9 @@ const { RNGoogleSafetyNet } = NativeModules;
  * @method isPlayServicesAvailable
  * @return {Promise}
  */
-export const isPlayServicesAvailable = () => {
+export function isPlayServicesAvailable() {
   return RNGoogleSafetyNet.isPlayServicesAvailable();
-};
+}
 
 /**
  * Generate the nonce using react-native-securerandom
@@ -20,7 +20,7 @@ export const isPlayServicesAvailable = () => {
  * @param  {int} length
  * @return  {Promise}
  */
-export const generateNonce = (length) => {
+export function generateNonce(length) {
   return generateSecureRandom(length);
 };
 
@@ -31,9 +31,9 @@ export const generateNonce = (length) => {
  * @param  {String} apiKey  API key from Google APIs
  * @return {Promise}
  */
-export const sendAttestationRequest = (nonce, apiKey) => {
+export function sendAttestationRequest(nonce, apiKey) {
   return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
-};
+}
 
 /**
  * Verify the attestation response
@@ -44,7 +44,7 @@ export const sendAttestationRequest = (nonce, apiKey) => {
  * @param  {Object} response Response from sendAttestationRequest
  * @return {Promise | Error}
  */
-export const verifyAttestationResponse = (nonce, response) => {
+export function verifyAttestationResponse(nonce, response) {
   const nonceString = Utf8ArrayToStr(nonce);
   if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
     return Promise.resolve();
@@ -52,7 +52,7 @@ export const verifyAttestationResponse = (nonce, response) => {
   else {
     throw new Error("Verification failed");
   }
-};
+}
 
 /**
  * Wrapper for sendAttestationRequest and verifyAttestationResponse
@@ -61,12 +61,12 @@ export const verifyAttestationResponse = (nonce, response) => {
  * @param  {String} apiKey API key from Google APIs
  * @return {Promise | Error}
  */
-export const sendAndVerifyAttestation = (nonce, apiKey) => {
+export function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey)
-    .then((originalNonce, response) => {
+    .then(function(originalNonce, response) {
       return verifyAttestationResponse(originalNonce, response);
-    }
-    .catch((e) => {
+    })
+    .catch(function(e) {
       return e;
     });
 };

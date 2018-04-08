@@ -8,7 +8,7 @@
  * This library is free.  You can redistribute it and/or modify it.
  */
 
-export const Utf8ArrayToStr = (array) => {
+export function Utf8ArrayToStr(array) {
     var out, i, len, c;
     var char2, char3;
 
