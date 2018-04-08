@@ -54,31 +54,36 @@ export function Utf8ArrayToStr(array) {
     var out, i, len, c;
     var char2, char3;
 
-    out = &quot;&quot;;
+    out = &apos;&apos;;
     len = array.length;
     i = 0;
-    while(i &lt; len) {
-    c = array[i++];
-    switch(c &gt;&gt; 4)
-    {
-      case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:
-        // 0xxxxxxx
-        out += String.fromCharCode(c);
-        break;
-      case 12: case 13:
-        // 110x xxxx   10xx xxxx
-        char2 = array[i++];
-        out += String.fromCharCode(((c &amp; 0x1F) &lt;&lt; 6) | (char2 &amp; 0x3F));
-        break;
-      case 14:
-        // 1110 xxxx  10xx xxxx  10xx xxxx
-        char2 = array[i++];
-        char3 = array[i++];
-        out += String.fromCharCode(((c &amp; 0x0F) &lt;&lt; 12) |
-                       ((char2 &amp; 0x3F) &lt;&lt; 6) |
-                       ((char3 &amp; 0x3F) &lt;&lt; 0));
-        break;
-    }
+    while (i &lt; len) {
+        c = array[i++];
+        switch (c &gt;&gt; 4) {
+            case 0:
+            case 1:
+            case 2:
+            case 3:
+            case 4:
+            case 5:
+            case 6:
+            case 7:
+                // 0xxxxxxx
+                out += String.fromCharCode(c);
+                break;
+            case 12:
+            case 13:
+                // 110x xxxx   10xx xxxx
+                char2 = array[i++];
+                out += String.fromCharCode(((c &amp; 0x1f) &lt;&lt; 6) | (char2 &amp; 0x3f));
+                break;
+            case 14:
+                // 1110 xxxx  10xx xxxx  10xx xxxx
+                char2 = array[i++];
+                char3 = array[i++];
+                out += String.fromCharCode(((c &amp; 0x0f) &lt;&lt; 12) | ((char2 &amp; 0x3f) &lt;&lt; 6) | ((char3 &amp; 0x3f) &lt;&lt; 0));
+                break;
+        }
     }
 
     return out;

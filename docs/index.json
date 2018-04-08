@@ -1,899 +1,930 @@
 [
-    {
-        "__docId__": 1,
-        "kind": "external",
-        "name": "Infinity",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Infinity",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n    return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n    return generateSecureRandom(length);\n}\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n    return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(originalNonce, response) {\n    const nonceString = Utf8ArrayToStr(originalNonce);\n    if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n        return Promise.resolve();\n    } else {\n        throw new Error('Verification failed');\n    }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n    return sendAttestationRequest(nonce, apiKey)\n        .then(function(originalNonce, response) {\n            return verifyAttestationResponse(originalNonce, response);\n        })\n        .catch(function(e) {\n            return e;\n        });\n}\n\nexport default RNGoogleSafetyNet;\n",
+    "static": true,
+    "longname": "/Users/rajiv/google-safetynet/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "RNGoogleSafetyNet",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~RNGoogleSafetyNet",
+    "access": "public",
+    "export": false,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
     },
-    {
-        "__docId__": 2,
-        "kind": "external",
-        "name": "NaN",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~NaN",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "function",
+    "name": "isPlayServicesAvailable",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~isPlayServicesAvailable",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": "{isPlayServicesAvailable}",
+    "description": "Checks if Google Play Services is available and up to date",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "isPlayServicesAvailable"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
     },
-    {
-        "__docId__": 3,
-        "kind": "external",
-        "name": "undefined",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~undefined",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 4,
-        "kind": "external",
-        "name": "null",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~null",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 5,
-        "kind": "external",
-        "name": "Object",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Object",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 6,
-        "kind": "external",
-        "name": "object",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~object",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 7,
-        "kind": "external",
-        "name": "Function",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Function",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 8,
-        "kind": "external",
-        "name": "function",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~function",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 9,
-        "kind": "external",
-        "name": "Boolean",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Boolean",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 10,
-        "kind": "external",
-        "name": "boolean",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~boolean",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 11,
-        "kind": "external",
-        "name": "Symbol",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Symbol",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 12,
-        "kind": "external",
-        "name": "Error",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Error",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 13,
-        "kind": "external",
-        "name": "EvalError",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~EvalError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 14,
-        "kind": "external",
-        "name": "InternalError",
-        "externalLink":
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~InternalError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 15,
-        "kind": "external",
-        "name": "RangeError",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~RangeError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 16,
-        "kind": "external",
-        "name": "ReferenceError",
-        "externalLink":
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~ReferenceError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 17,
-        "kind": "external",
-        "name": "SyntaxError",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~SyntaxError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 18,
-        "kind": "external",
-        "name": "TypeError",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~TypeError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 19,
-        "kind": "external",
-        "name": "URIError",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~URIError",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 20,
-        "kind": "external",
-        "name": "Number",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Number",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 21,
-        "kind": "external",
-        "name": "number",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~number",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 22,
-        "kind": "external",
-        "name": "Date",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Date",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 23,
-        "kind": "external",
-        "name": "String",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~String",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 24,
-        "kind": "external",
-        "name": "string",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~string",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 25,
-        "kind": "external",
-        "name": "RegExp",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~RegExp",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 26,
-        "kind": "external",
-        "name": "Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 27,
-        "kind": "external",
-        "name": "Int8Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Int8Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 28,
-        "kind": "external",
-        "name": "Uint8Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Uint8Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 29,
-        "kind": "external",
-        "name": "Uint8ClampedArray",
-        "externalLink":
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 30,
-        "kind": "external",
-        "name": "Int16Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Int16Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 31,
-        "kind": "external",
-        "name": "Uint16Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Uint16Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 32,
-        "kind": "external",
-        "name": "Int32Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Int32Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 33,
-        "kind": "external",
-        "name": "Uint32Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Uint32Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 34,
-        "kind": "external",
-        "name": "Float32Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Float32Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 35,
-        "kind": "external",
-        "name": "Float64Array",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Float64Array",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 36,
-        "kind": "external",
-        "name": "Map",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Map",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 37,
-        "kind": "external",
-        "name": "Set",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Set",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 38,
-        "kind": "external",
-        "name": "WeakMap",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~WeakMap",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 39,
-        "kind": "external",
-        "name": "WeakSet",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~WeakSet",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 40,
-        "kind": "external",
-        "name": "ArrayBuffer",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~ArrayBuffer",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 41,
-        "kind": "external",
-        "name": "DataView",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~DataView",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 42,
-        "kind": "external",
-        "name": "JSON",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~JSON",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 43,
-        "kind": "external",
-        "name": "Promise",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Promise",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 44,
-        "kind": "external",
-        "name": "Generator",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Generator",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 45,
-        "kind": "external",
-        "name": "GeneratorFunction",
-        "externalLink":
-            "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~GeneratorFunction",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 46,
-        "kind": "external",
-        "name": "Reflect",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Reflect",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 47,
-        "kind": "external",
-        "name": "Proxy",
-        "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
-        "memberof": "src/.external-ecmascript.js",
-        "static": true,
-        "longname": "src/.external-ecmascript.js~Proxy",
-        "access": "public",
-        "description": "",
-        "builtinExternal": true
-    },
-    {
-        "__docId__": 48,
-        "kind": "file",
-        "name": "src/index.js",
-        "content":
-            "\nimport { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n  return generateSecureRandom(length);\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(originalNonce, response) {\n  const nonceString = Utf8ArrayToStr(originalNonce);\n  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n    return Promise.resolve();\n  }\n  else {\n    throw new Error(\"Verification failed\");\n  }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey)\n    .then(function(originalNonce, response) {\n      return verifyAttestationResponse(originalNonce, response);\n    })\n    .catch(function(e) {\n      return e;\n    });\n};\n\nexport default RNGoogleSafetyNet;\n",
-        "static": true,
-        "longname": "/Users/rajiv/google-safetynet/src/index.js",
-        "access": "public",
-        "description": null,
-        "lineNumber": 1
-    },
-    {
-        "__docId__": 49,
-        "kind": "variable",
-        "name": "RNGoogleSafetyNet",
-        "memberof": "src/index.js",
-        "static": true,
-        "longname": "src/index.js~RNGoogleSafetyNet",
-        "access": "public",
-        "export": false,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": null,
-        "description": null,
-        "lineNumber": 6,
-        "undocument": true,
-        "type": {
-            "types": ["*"]
-        },
-        "ignore": true
-    },
-    {
-        "__docId__": 50,
-        "kind": "function",
-        "name": "isPlayServicesAvailable",
-        "memberof": "src/index.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/index.js~isPlayServicesAvailable",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": "{isPlayServicesAvailable}",
-        "description": "Checks if Google Play Services is available and up to date",
-        "lineNumber": 13,
-        "unknown": [
-            {
-                "tagName": "@method",
-                "tagValue": "isPlayServicesAvailable"
-            }
+    "params": []
+  },
+  {
+    "__docId__": 51,
+    "kind": "function",
+    "name": "generateNonce",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~generateNonce",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": "{generateNonce}",
+    "description": "Generate the nonce using react-native-securerandom",
+    "lineNumber": 22,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "generateNonce"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "int"
         ],
-        "return": {
-            "nullable": null,
-            "types": ["Promise"],
-            "spread": false,
-            "description": ""
-        },
-        "params": []
-    },
-    {
-        "__docId__": 51,
-        "kind": "function",
-        "name": "generateNonce",
-        "memberof": "src/index.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/index.js~generateNonce",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": "{generateNonce}",
-        "description": "Generate the nonce using react-native-securerandom",
-        "lineNumber": 23,
-        "unknown": [
-            {
-                "tagName": "@method",
-                "tagValue": "generateNonce"
-            }
-        ],
-        "params": [
-            {
-                "nullable": null,
-                "types": ["int"],
-                "spread": false,
-                "optional": false,
-                "name": "length",
-                "description": ""
-            }
-        ],
-        "return": {
-            "nullable": null,
-            "types": ["Promise"],
-            "spread": false,
-            "description": ""
-        }
-    },
-    {
-        "__docId__": 52,
-        "kind": "function",
-        "name": "sendAttestationRequest",
-        "memberof": "src/index.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/index.js~sendAttestationRequest",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": "{sendAttestationRequest}",
-        "description": "Send the attestation request",
-        "lineNumber": 34,
-        "unknown": [
-            {
-                "tagName": "@method",
-                "tagValue": "sendAttestationRequest"
-            }
-        ],
-        "params": [
-            {
-                "nullable": null,
-                "types": ["Uint8Array"],
-                "spread": false,
-                "optional": false,
-                "name": "nonce",
-                "description": "Randomly generated nonce"
-            },
-            {
-                "nullable": null,
-                "types": ["String"],
-                "spread": false,
-                "optional": false,
-                "name": "apiKey",
-                "description": "API key from Google APIs"
-            }
-        ],
-        "return": {
-            "nullable": null,
-            "types": ["Promise"],
-            "spread": false,
-            "description": ""
-        }
-    },
-    {
-        "__docId__": 53,
-        "kind": "function",
-        "name": "verifyAttestationResponse",
-        "memberof": "src/index.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/index.js~verifyAttestationResponse",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": "{verifyAttestationResponse}",
-        "description":
-            "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-        "lineNumber": 51,
-        "unknown": [
-            {
-                "tagName": "@method",
-                "tagValue": "verifyAttestationResponse"
-            }
-        ],
-        "params": [
-            {
-                "nullable": null,
-                "types": ["Uint8Array"],
-                "spread": false,
-                "optional": false,
-                "name": "originalNonce",
-                "description": "Nonce originally provided to sendAttestationRequest"
-            },
-            {
-                "nullable": null,
-                "types": ["Object"],
-                "spread": false,
-                "optional": false,
-                "name": "response",
-                "description": "Response from sendAttestationRequest"
-            },
-            {
-                "nullable": null,
-                "types": ["String"],
-                "spread": false,
-                "optional": false,
-                "name": "response.nonce",
-                "description": "Nonce in response sendAttestationRequest"
-            },
-            {
-                "nullable": null,
-                "types": ["bool"],
-                "spread": false,
-                "optional": false,
-                "name": "response.ctsProfileMatch",
-                "description": "Device matches a device that has passed Android Compatibility Testing"
-            },
-            {
-                "nullable": null,
-                "types": ["bool"],
-                "spread": false,
-                "optional": false,
-                "name": "response.basicIntegrity",
-                "description": "Device has not been tampered with"
-            }
-        ],
-        "return": {
-            "nullable": null,
-            "types": ["Promise"],
-            "spread": false,
-            "description": ""
-        },
-        "throws": [
-            {
-                "types": ["Error"],
-                "description": ""
-            }
-        ]
-    },
-    {
-        "__docId__": 54,
-        "kind": "function",
-        "name": "sendAndVerifyAttestation",
-        "memberof": "src/index.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/index.js~sendAndVerifyAttestation",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/index.js",
-        "importStyle": "{sendAndVerifyAttestation}",
-        "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-        "lineNumber": 69,
-        "unknown": [
-            {
-                "tagName": "@method",
-                "tagValue": "sendAndVerifyAttestation"
-            }
-        ],
-        "params": [
-            {
-                "nullable": null,
-                "types": ["Uint8Array"],
-                "spread": false,
-                "optional": false,
-                "name": "nonce",
-                "description": "Randomly generated nonce"
-            },
-            {
-                "nullable": null,
-                "types": ["String"],
-                "spread": false,
-                "optional": false,
-                "name": "apiKey",
-                "description": "API key from Google APIs"
-            }
-        ],
-        "return": {
-            "nullable": null,
-            "types": ["Promise"],
-            "spread": false,
-            "description": ""
-        },
-        "throws": [
-            {
-                "types": ["Error"],
-                "description": ""
-            }
-        ]
-    },
-    {
-        "__docId__": 55,
-        "kind": "file",
-        "name": "src/utils.js",
-        "content":
-            "// http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt\n\n/* utf.js - UTF-8 <=> UTF-16 convertion\n *\n * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>\n * Version: 1.0\n * LastModified: Dec 25 1999\n * This library is free.  You can redistribute it and/or modify it.\n */\n\nexport function Utf8ArrayToStr(array) {\n    var out, i, len, c;\n    var char2, char3;\n\n    out = \"\";\n    len = array.length;\n    i = 0;\n    while(i < len) {\n    c = array[i++];\n    switch(c >> 4)\n    {\n      case 0: case 1: case 2: case 3: case 4: case 5: case 6: case 7:\n        // 0xxxxxxx\n        out += String.fromCharCode(c);\n        break;\n      case 12: case 13:\n        // 110x xxxx   10xx xxxx\n        char2 = array[i++];\n        out += String.fromCharCode(((c & 0x1F) << 6) | (char2 & 0x3F));\n        break;\n      case 14:\n        // 1110 xxxx  10xx xxxx  10xx xxxx\n        char2 = array[i++];\n        char3 = array[i++];\n        out += String.fromCharCode(((c & 0x0F) << 12) |\n                       ((char2 & 0x3F) << 6) |\n                       ((char3 & 0x3F) << 0));\n        break;\n    }\n    }\n\n    return out;\n}\n",
-        "static": true,
-        "longname": "/Users/rajiv/google-safetynet/src/utils.js",
-        "access": "public",
-        "description": null,
-        "lineNumber": 1
-    },
-    {
-        "__docId__": 56,
-        "kind": "function",
-        "name": "Utf8ArrayToStr",
-        "memberof": "src/utils.js",
-        "generator": false,
-        "async": false,
-        "static": true,
-        "longname": "src/utils.js~Utf8ArrayToStr",
-        "access": "public",
-        "export": true,
-        "importPath": "react-native-google-safetynet/src/utils.js",
-        "importStyle": "{Utf8ArrayToStr}",
-        "description": null,
-        "lineNumber": 11,
-        "undocument": true,
-        "params": [
-            {
-                "name": "array",
-                "types": ["*"]
-            }
-        ],
-        "return": {
-            "types": ["*"]
-        }
-    },
-    {
-        "kind": "index",
-        "content":
-            "\n# SafetyNet for React Native\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n\nSee the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)\n\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
-        "longname": "/Users/rajiv/google-safetynet/README.md",
-        "name": "./README.md",
-        "static": true,
-        "access": "public"
-    },
-    {
-        "kind": "packageJSON",
-        "content":
-            "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.0.4\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\"\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
-        "longname": "/Users/rajiv/google-safetynet/package.json",
-        "name": "package.json",
-        "static": true,
-        "access": "public"
+        "spread": false,
+        "optional": false,
+        "name": "length",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
     }
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "sendAttestationRequest",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~sendAttestationRequest",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": "{sendAttestationRequest}",
+    "description": "Send the attestation request",
+    "lineNumber": 33,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "sendAttestationRequest"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Uint8Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "nonce",
+        "description": "Randomly generated nonce"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "apiKey",
+        "description": "API key from Google APIs"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "verifyAttestationResponse",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~verifyAttestationResponse",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": "{verifyAttestationResponse}",
+    "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
+    "lineNumber": 50,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "verifyAttestationResponse"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Uint8Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "originalNonce",
+        "description": "Nonce originally provided to sendAttestationRequest"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response",
+        "description": "Response from sendAttestationRequest"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.nonce",
+        "description": "Nonce in response sendAttestationRequest"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "bool"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.ctsProfileMatch",
+        "description": "Device matches a device that has passed Android Compatibility Testing"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "bool"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.basicIntegrity",
+        "description": "Device has not been tampered with"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "sendAndVerifyAttestation",
+    "memberof": "src/index.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/index.js~sendAndVerifyAttestation",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/index.js",
+    "importStyle": "{sendAndVerifyAttestation}",
+    "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
+    "lineNumber": 67,
+    "unknown": [
+      {
+        "tagName": "@method",
+        "tagValue": "sendAndVerifyAttestation"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Uint8Array"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "nonce",
+        "description": "Randomly generated nonce"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "apiKey",
+        "description": "API key from Google APIs"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    },
+    "throws": [
+      {
+        "types": [
+          "Error"
+        ],
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 55,
+    "kind": "file",
+    "name": "src/utils.js",
+    "content": "// http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt\n\n/* utf.js - UTF-8 <=> UTF-16 convertion\n *\n * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>\n * Version: 1.0\n * LastModified: Dec 25 1999\n * This library is free.  You can redistribute it and/or modify it.\n */\n\nexport function Utf8ArrayToStr(array) {\n    var out, i, len, c;\n    var char2, char3;\n\n    out = '';\n    len = array.length;\n    i = 0;\n    while (i < len) {\n        c = array[i++];\n        switch (c >> 4) {\n            case 0:\n            case 1:\n            case 2:\n            case 3:\n            case 4:\n            case 5:\n            case 6:\n            case 7:\n                // 0xxxxxxx\n                out += String.fromCharCode(c);\n                break;\n            case 12:\n            case 13:\n                // 110x xxxx   10xx xxxx\n                char2 = array[i++];\n                out += String.fromCharCode(((c & 0x1f) << 6) | (char2 & 0x3f));\n                break;\n            case 14:\n                // 1110 xxxx  10xx xxxx  10xx xxxx\n                char2 = array[i++];\n                char3 = array[i++];\n                out += String.fromCharCode(((c & 0x0f) << 12) | ((char2 & 0x3f) << 6) | ((char3 & 0x3f) << 0));\n                break;\n        }\n    }\n\n    return out;\n}\n",
+    "static": true,
+    "longname": "/Users/rajiv/google-safetynet/src/utils.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 56,
+    "kind": "function",
+    "name": "Utf8ArrayToStr",
+    "memberof": "src/utils.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/utils.js~Utf8ArrayToStr",
+    "access": "public",
+    "export": true,
+    "importPath": "react-native-google-safetynet/src/utils.js",
+    "importStyle": "{Utf8ArrayToStr}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "kind": "index",
+    "content": "\n# SafetyNet for React Native\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n\nSee the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)\n\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
+    "longname": "/Users/rajiv/google-safetynet/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n    \"name\": \"react-native-google-safetynet\",\n    \"version\": \"0.0.4\",\n    \"description\": \"React Native implementation for Google's SafetyNet API\",\n    \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n    \"license\": \"MIT\",\n    \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n    \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n    \"main\": \"index.js\",\n    \"scripts\": {\n        \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n        \"docs\": \"./node_modules/.bin/esdoc\",\n        \"format\": \"prettier --write \\\"**/*.{js,json}\\\"\",\n        \"precommit\": \"lint-staged\"\n    },\n    \"lint-staged\": {\n        \"*.{js,json}\": [\"prettier --write\", \"git add\"]\n    },\n    \"keywords\": [\"react-native\", \"safetynet\"],\n    \"peerDependencies\": {\n        \"react-native\": \"^0.48.0\"\n    },\n    \"dependencies\": {\n        \"react-native-securerandom\": \"^0.1.1\"\n    },\n    \"devDependencies\": {\n        \"babel-eslint\": \"^8.2.2\",\n        \"esdoc\": \"^1.0.4\",\n        \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n        \"esdoc-standard-plugin\": \"^1.0.0\",\n        \"eslint\": \"^4.19.1\",\n        \"eslint-plugin-babel\": \"^5.0.0\",\n        \"eslint-plugin-import\": \"^2.10.0\",\n        \"eslint-plugin-react-native\": \"^3.2.1\",\n        \"husky\": \"^0.14.3\",\n        \"lint-staged\": \"^7.0.4\",\n        \"prettier\": \"^1.11.1\"\n    }\n}\n",
+    "longname": "/Users/rajiv/google-safetynet/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
 ]

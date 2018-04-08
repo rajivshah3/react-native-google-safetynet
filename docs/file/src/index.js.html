@@ -40,8 +40,7 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">
-import { NativeModules } from &apos;react-native&apos;;
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { NativeModules } from &apos;react-native&apos;;
 import { generateSecureRandom } from &apos;react-native-securerandom&apos;;
 import { Utf8ArrayToStr } from &apos;./utils&apos;;
 
@@ -53,7 +52,7 @@ const { RNGoogleSafetyNet } = NativeModules;
  * @return {Promise}
  */
 export function isPlayServicesAvailable() {
-  return RNGoogleSafetyNet.isPlayServicesAvailable();
+    return RNGoogleSafetyNet.isPlayServicesAvailable();
 }
 
 /**
@@ -63,8 +62,8 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-  return generateSecureRandom(length);
-};
+    return generateSecureRandom(length);
+}
 
 /**
  * Send the attestation request
@@ -74,7 +73,7 @@ export function generateNonce(length) {
  * @return {Promise}
  */
 export function sendAttestationRequest(nonce, apiKey) {
-  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
+    return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
 }
 
 /**
@@ -91,13 +90,12 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
-  const nonceString = Utf8ArrayToStr(originalNonce);
-  if (nonceString === response.nonce &amp;&amp; response.ctsProfileMatch &amp;&amp; response.basicIntegrity) {
-    return Promise.resolve();
-  }
-  else {
-    throw new Error(&quot;Verification failed&quot;);
-  }
+    const nonceString = Utf8ArrayToStr(originalNonce);
+    if (nonceString === response.nonce &amp;&amp; response.ctsProfileMatch &amp;&amp; response.basicIntegrity) {
+        return Promise.resolve();
+    } else {
+        throw new Error(&apos;Verification failed&apos;);
+    }
 }
 
 /**
@@ -109,14 +107,14 @@ export function verifyAttestationResponse(originalNonce, response) {
  * @throws {Error}
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
-  return sendAttestationRequest(nonce, apiKey)
-    .then(function(originalNonce, response) {
-      return verifyAttestationResponse(originalNonce, response);
-    })
-    .catch(function(e) {
-      return e;
-    });
-};
+    return sendAttestationRequest(nonce, apiKey)
+        .then(function(originalNonce, response) {
+            return verifyAttestationResponse(originalNonce, response);
+        })
+        .catch(function(e) {
+            return e;
+        });
+}
 
 export default RNGoogleSafetyNet;
 </code></pre>
