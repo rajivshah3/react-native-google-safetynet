@@ -1,9 +1,9 @@
 {
   "name": "react-native-google-safetynet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "React Native implementation for Google's SafetyNet API",
-  "author": "Rajiv Shah <rajivshah1@icloud.com> (https://github.com/rajivshah3)",
-  "license": "MIT",
+  "author": "",
+  "license": "",
   "homepage": "https://github.com/rajivshah3/react-native-google-safetynet",
   "bugs": "https://github.com/rajivshah3/react-native-google-safetynet/issues",
   "main": "index.js",
@@ -14,8 +14,6 @@
     "react-native",
     "safetynet"
   ],
-  "author": "",
-  "license": "",
   "peerDependencies": {
     "react-native": "^0.48.0"
   },
