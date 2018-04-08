@@ -66,7 +66,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
       @Override
       public void onSuccess(SafetyNetApi.AttestationResponse response) {
-        promise.resolve(response.getJwsResult());
+        promise.resolve(nonce, response.getJwsResult());
       }
     })
     .addOnFailureListener(this, new OnFailureListener() {
