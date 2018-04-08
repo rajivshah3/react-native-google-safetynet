@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "\nimport { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n  return generateSecureRandom(length);\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} nonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(nonce, response) {\n  const nonceString = Utf8ArrayToStr(nonce);\n  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n    return Promise.resolve();\n  }\n  else {\n    throw new Error(\"Verification failed\");\n  }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey)\n    .then(function(originalNonce, response) {\n      return verifyAttestationResponse(originalNonce, response);\n    })\n    .catch(function(e) {\n      return e;\n    });\n};\n\nexport default RNGoogleSafetyNet;\n",
+    "content": "\nimport { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n  return generateSecureRandom(length);\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(originalNonce, response) {\n  const nonceString = Utf8ArrayToStr(originalNonce);\n  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n    return Promise.resolve();\n  }\n  else {\n    throw new Error(\"Verification failed\");\n  }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey)\n    .then(function(originalNonce, response) {\n      return verifyAttestationResponse(originalNonce, response);\n    })\n    .catch(function(e) {\n      return e;\n    });\n};\n\nexport default RNGoogleSafetyNet;\n",
     "static": true,
     "longname": "/Users/rajiv/google-safetynet/src/index.js",
     "access": "public",
@@ -734,7 +734,7 @@
     "importPath": "react-native-google-safetynet/src/index.js",
     "importStyle": "{verifyAttestationResponse}",
     "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-    "lineNumber": 48,
+    "lineNumber": 51,
     "unknown": [
       {
         "tagName": "@method",
@@ -749,7 +749,7 @@
         ],
         "spread": false,
         "optional": false,
-        "name": "nonce",
+        "name": "originalNonce",
         "description": "Nonce originally provided to sendAttestationRequest"
       },
       {
@@ -761,6 +761,36 @@
         "optional": false,
         "name": "response",
         "description": "Response from sendAttestationRequest"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.nonce",
+        "description": "Nonce in response sendAttestationRequest"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "bool"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.ctsProfileMatch",
+        "description": "Device matches a device that has passed Android Compatibility Testing"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "bool"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "response.basicIntegrity",
+        "description": "Device has not been tampered with"
       }
     ],
     "return": {
@@ -794,7 +824,7 @@
     "importPath": "react-native-google-safetynet/src/index.js",
     "importStyle": "{sendAndVerifyAttestation}",
     "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-    "lineNumber": 66,
+    "lineNumber": 69,
     "unknown": [
       {
         "tagName": "@method",
@@ -883,7 +913,7 @@
   },
   {
     "kind": "index",
-    "content": "\n# react-native-google-safetynet\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
+    "content": "\n# SafetyNet for React Native\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n\nSee the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)\n\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
     "longname": "/Users/rajiv/google-safetynet/README.md",
     "name": "./README.md",
     "static": true,
