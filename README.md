@@ -4,7 +4,9 @@
 ## Getting started
 
 `$ npm install react-native-google-safetynet --save`
+
 or
+
 `$ yarn add react-native-google-safetynet`
 
 ### Mostly automatic installation
