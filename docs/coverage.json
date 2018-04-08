@@ -1,0 +1,14 @@
+{
+  "coverage": "0%",
+  "expectCount": 1,
+  "actualCount": 0,
+  "files": {
+    "src/utils.js": {
+      "expectCount": 1,
+      "actualCount": 0,
+      "undocumentLines": [
+        11
+      ]
+    }
+  }
+}
