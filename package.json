@@ -1,29 +1,39 @@
 {
-  "name": "react-native-google-safetynet",
-  "version": "0.0.4",
-  "description": "React Native implementation for Google's SafetyNet API",
-  "author": "Rajiv Shah <rajivshah1@icloud.com>",
-  "license": "MIT",
-  "homepage": "https://github.com/rajivshah3/react-native-google-safetynet",
-  "bugs": "https://github.com/rajivshah3/react-native-google-safetynet/issues",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs": "./node_modules/.bin/esdoc"
-  },
-  "keywords": [
-    "react-native",
-    "safetynet"
-  ],
-  "peerDependencies": {
-    "react-native": "^0.48.0"
-  },
-  "dependencies": {
-    "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-    "react-native-securerandom": "^0.1.1"
-  },
-  "devDependencies": {
-    "esdoc": "^1.0.4",
-    "esdoc-standard-plugin": "^1.0.0"
-  }
+    "name": "react-native-google-safetynet",
+    "version": "0.0.4",
+    "description": "React Native implementation for Google's SafetyNet API",
+    "author": "Rajiv Shah <rajivshah1@icloud.com>",
+    "license": "MIT",
+    "homepage": "https://github.com/rajivshah3/react-native-google-safetynet",
+    "bugs": "https://github.com/rajivshah3/react-native-google-safetynet/issues",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "docs": "./node_modules/.bin/esdoc",
+        "format": "prettier --write \"**/*.{js,json}\"",
+        "precommit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,json}": ["prettier --write", "git add"]
+    },
+    "keywords": ["react-native", "safetynet"],
+    "peerDependencies": {
+        "react-native": "^0.48.0"
+    },
+    "dependencies": {
+        "react-native-securerandom": "^0.1.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^8.2.2",
+        "esdoc": "^1.0.4",
+        "esdoc-ecmascript-proposal-plugin": "^1.0.0",
+        "esdoc-standard-plugin": "^1.0.0",
+        "eslint": "^4.19.1",
+        "eslint-plugin-babel": "^5.0.0",
+        "eslint-plugin-import": "^2.10.0",
+        "eslint-plugin-react-native": "^3.2.1",
+        "husky": "^0.14.3",
+        "lint-staged": "^7.0.4",
+        "prettier": "^1.11.1"
+    }
 }
