@@ -1,6 +1,12 @@
 
 # SafetyNet for React Native
 
+[![GitHub version](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet.svg)](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet) [![Maintainability](https://api.codeclimate.com/v1/badges/dfa536260a3131540826/maintainability)](https://codeclimate.com/github/rajivshah3/react-native-google-safetynet/maintainability)
+
+
+## About SafetyNet
+Google provides an API to verify device integrity and detect harmful apps. See the [SafetyNet documentation](https://developer.android.com/training/safetynet/index.html) for more information.
+
 ## Getting started
 
 `$ npm install react-native-google-safetynet --save`
