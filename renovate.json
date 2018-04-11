@@ -4,5 +4,6 @@
   ],
   "ignoreDeps": [
     "react-native"
-  ]
+  ],
+  "schedule": ["after 12am and before 5am every day"]
 }
