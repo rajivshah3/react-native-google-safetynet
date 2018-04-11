@@ -19,7 +19,7 @@
     },
     "keywords": ["react-native", "safetynet"],
     "peerDependencies": {
-        "react-native": "^0.48.0"
+        "react-native": "^0.55.0"
     },
     "dependencies": {
         "react-native-securerandom": "^0.1.1"
