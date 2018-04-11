@@ -25,19 +25,19 @@
         "react-native-securerandom": "^0.1.1"
     },
     "devDependencies": {
-        "babel-eslint": "^8.2.2",
-        "esdoc": "^1.0.4",
-        "esdoc-ecmascript-proposal-plugin": "^1.0.0",
-        "esdoc-standard-plugin": "^1.0.0",
-        "eslint": "^4.19.1",
-        "eslint-config-airbnb-base": "^12.1.0",
-        "eslint-config-prettier": "^2.9.0",
-        "eslint-plugin-babel": "^5.0.0",
-        "eslint-plugin-import": "^2.10.0",
-        "eslint-plugin-prettier": "^2.6.0",
-        "eslint-plugin-react-native": "^3.2.1",
-        "husky": "^0.14.3",
-        "lint-staged": "^7.0.4",
-        "prettier": "^1.11.1"
+        "babel-eslint": "8.2.2",
+        "esdoc": "1.0.4",
+        "esdoc-ecmascript-proposal-plugin": "1.0.0",
+        "esdoc-standard-plugin": "1.0.0",
+        "eslint": "4.19.1",
+        "eslint-config-airbnb-base": "12.1.0",
+        "eslint-config-prettier": "2.9.0",
+        "eslint-plugin-babel": "5.0.0",
+        "eslint-plugin-import": "2.10.0",
+        "eslint-plugin-prettier": "2.6.0",
+        "eslint-plugin-react-native": "3.2.1",
+        "husky": "0.14.3",
+        "lint-staged": "7.0.4",
+        "prettier": "1.11.1"
     }
 }
