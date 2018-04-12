@@ -1,8 +1,7 @@
 
 # SafetyNet for React Native
 
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/de3c4e6e440f4cdf93492ddd5b41ace1)](https://app.codacy.com/app/rajivshah3/react-native-google-safetynet?utm_source=github.com&utm_medium=referral&utm_content=rajivshah3/react-native-google-safetynet&utm_campaign=badger)
-[![GitHub version](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet.svg)](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet) [![Maintainability](https://api.codeclimate.com/v1/badges/dfa536260a3131540826/maintainability)](https://codeclimate.com/github/rajivshah3/react-native-google-safetynet/maintainability)
+[![GitHub version](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet.svg)](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet) [![Maintainability](https://api.codeclimate.com/v1/badges/dfa536260a3131540826/maintainability)](https://codeclimate.com/github/rajivshah3/react-native-google-safetynet/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/de3c4e6e440f4cdf93492ddd5b41ace1)](https://app.codacy.com/app/rajivshah3/react-native-google-safetynet?utm_source=github.com&utm_medium=referral&utm_content=rajivshah3/react-native-google-safetynet&utm_campaign=badger)
 
 
 ## About SafetyNet
