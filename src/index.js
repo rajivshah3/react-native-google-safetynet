@@ -12,7 +12,7 @@ const { RNGoogleSafetyNet } = NativeModules;
  * @return {Promise}
  */
 export function isPlayServicesAvailable() {
-    return RNGoogleSafetyNet.isPlayServicesAvailable();
+  return RNGoogleSafetyNet.isPlayServicesAvailable();
 }
 
 /**
@@ -22,7 +22,7 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-    return generateSecureRandom(length);
+  return generateSecureRandom(length);
 }
 
 /**
@@ -33,7 +33,7 @@ export function generateNonce(length) {
  * @return {Promise}
  */
 export function sendAttestationRequest(nonce, apiKey) {
-    return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
+  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
 }
 
 /**
@@ -50,11 +50,11 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
-    const nonceString = Utf8ArrayToStr(originalNonce);
-    if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
-        return Promise.resolve();
-    }
-    throw new Error('Verification failed');
+  const nonceString = Utf8ArrayToStr(originalNonce);
+  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
+    return Promise.resolve();
+  }
+  throw new Error('Verification failed');
 }
 
 /**
@@ -66,9 +66,9 @@ export function verifyAttestationResponse(originalNonce, response) {
  * @throws {Error}
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
-    return sendAttestationRequest(nonce, apiKey)
-        .then((originalNonce, response) => verifyAttestationResponse(originalNonce, response))
-        .catch((e) => e);
+  return sendAttestationRequest(nonce, apiKey)
+    .then((originalNonce, response) => verifyAttestationResponse(originalNonce, response))
+    .catch(e => e);
 }
 
 export default RNGoogleSafetyNet;
