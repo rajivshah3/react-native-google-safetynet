@@ -4,10 +4,7 @@ package com.rajivshah.safetynet;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.Callback;
-import com.facebook.react.bridge.WriteableArray;
 import com.facebook.react.bridge.WriteableNativeArray;
-import com.facebook.react.bridge.WriteableMap;
 import com.facebook.react.bridge.WriteableNativeMap;
 
 import com.google.android.gms.common.api.ApiException;

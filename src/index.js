@@ -1,4 +1,6 @@
+/* eslint-disable import/no-unresolved */
 import { NativeModules } from 'react-native';
+/* eslint-enable import/no-unresolved */
 import { generateSecureRandom } from 'react-native-securerandom';
 import { Utf8ArrayToStr } from './utils';
 
