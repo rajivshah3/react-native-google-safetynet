@@ -55,7 +55,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   * @param promise
   */
   @ReactMethod
-  public void isPlayServicesAvailable(Promise promise){
+  public void isPlayServicesAvailable(final Promise promise){
     ConnectionResult result = new ConnectionResult(GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(baseContext));
     if (result.isSuccess()){
       promise.resolve(result.toString());
@@ -73,7 +73,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    * @param promise
    */
   @ReactMethod
-  public void sendAttestationRequest(byte[] nonce, String apiKey, Promise promise){
+  public void sendAttestationRequest(byte[] nonce, String apiKey, final Promise promise){
     SafetyNet.getClient(baseContext).attest(nonce, apiKey)
     .addOnSuccessListener(activity,
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
@@ -96,7 +96,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    * @param promise
    */
   @ReactMethod
-  public void isVerificationEnabled(Promise promise){
+  public void isVerificationEnabled(final Promise promise){
     SafetyNet.getClient(baseContext)
     .isVerifyAppsEnabled()
     .addOnCompleteListener(new OnCompleteListener<VerifyAppsUserResponse>() {
@@ -120,7 +120,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    * @param promise
    */
   @ReactMethod
-  public void requestVerification(Promise promise){
+  public void requestVerification(final Promise promise){
     SafetyNet.getClient(baseContext)
     .enableVerifyApps()
     .addOnCompleteListener(new OnCompleteListener<VerifyAppsUserResponse>() {
@@ -146,7 +146,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    * @param promise
    */
   @ReactMethod
-  public void getHarmfulApps(Promise promise){
+  public void getHarmfulApps(final Promise promise){
     SafetyNet.getClient(baseContext)
     .listHarmfulApps()
     .addOnCompleteListener(new OnCompleteListener<HarmfulAppsResponse>() {
