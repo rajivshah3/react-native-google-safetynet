@@ -1,32 +1,47 @@
 
 package com.rajivshah.safetynet;
 
+import android.support.annotation.NonNull;
+import android.app.Activity;
+
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
-import com.facebook.react.bridge.WriteableNativeArray;
-import com.facebook.react.bridge.WriteableNativeMap;
+import com.facebook.react.bridge.WritableNativeArray;
+import com.facebook.react.bridge.WritableNativeMap;
+import com.facebook.react.bridge.WritableArray;
+import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Promise;
 
 import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.common.api.CommonStatusCodes;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.safetynet.SafetyNet;
 import com.google.android.gms.safetynet.SafetyNetApi;
+import com.google.android.gms.safetynet.SafetyNetApi.*;
+import com.google.android.gms.safetynet.HarmfulAppsData;
 import com.google.android.gms.safetynet.SafetyNetClient;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Tasks;
 import com.google.android.gms.tasks.Task;
 
-import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.List;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
+  private final ReactApplicationContext baseContext;
+  private final Activity activity;
 
   public RNGoogleSafetyNetModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
+    this.baseContext = getReactApplicationContext();
+    this.activity = getCurrentActivity();
   }
 
   @Override
@@ -41,7 +56,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   */
   @ReactMethod
   public void isPlayServicesAvailable(Promise promise){
-    ConnectionResult result = GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(context);
+    ConnectionResult result = new ConnectionResult(GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(baseContext));
     if (result.isSuccess()){
       promise.resolve(result.toString());
     }
@@ -59,15 +74,15 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void sendAttestationRequest(byte[] nonce, String apiKey, Promise promise){
-    SafetyNet.getClient(this).attest(nonce, apiKey)
-    .addOnSuccessListener(this,
+    SafetyNet.getClient(baseContext).attest(nonce, apiKey)
+    .addOnSuccessListener(activity,
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
       @Override
       public void onSuccess(SafetyNetApi.AttestationResponse response) {
         promise.resolve(nonce, response.getJwsResult());
       }
     })
-    .addOnFailureListener(this, new OnFailureListener() {
+    .addOnFailureListener(activity, new OnFailureListener() {
       @Override
       public void onFailure(@NonNull Exception e) {
         promise.reject(e);
@@ -82,7 +97,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void isVerificationEnabled(Promise promise){
-    SafetyNet.getClient(this)
+    SafetyNet.getClient(baseContext)
     .isVerifyAppsEnabled()
     .addOnCompleteListener(new OnCompleteListener<VerifyAppsUserResponse>() {
         @Override
@@ -106,7 +121,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void requestVerification(Promise promise){
-    SafetyNet.getClient(this)
+    SafetyNet.getClient(baseContext)
     .enableVerifyApps()
     .addOnCompleteListener(new OnCompleteListener<VerifyAppsUserResponse>() {
         @Override
@@ -132,7 +147,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void getHarmfulApps(Promise promise){
-    SafetyNet.getClient(this)
+    SafetyNet.getClient(baseContext)
     .listHarmfulApps()
     .addOnCompleteListener(new OnCompleteListener<HarmfulAppsResponse>() {
         @Override
@@ -147,10 +162,10 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
                 } else {
                     WritableArray appArray = new WritableNativeArray();
                     for (HarmfulAppsData harmfulApp : appList) {
-                        WriteableMap app = new WriteableNativeMap();
+                        WritableMap app = new WritableNativeMap();
                         app.putString("apkPackageName", harmfulApp.apkPackageName);
-                        app.putString("apkSha256", harmfulApp.apkSha256);
-                        app.putString("apkCategory", harmfulApp.apkCategory);
+                        app.putString("apkSha256", harmfulApp.apkSha256.toString());
+                        app.putInt("apkCategory", harmfulApp.apkCategory);
                         appArray.pushMap(app);
                     }
                     promise.resolve(appArray);
