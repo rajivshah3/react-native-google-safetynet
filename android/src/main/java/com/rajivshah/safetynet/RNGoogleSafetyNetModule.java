@@ -13,19 +13,19 @@ import com.facebook.react.bridge.WritableArray;
 import com.facebook.react.bridge.WritableMap;
 import com.facebook.react.bridge.Promise;
 
-import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.common.api.CommonStatusCodes;
+//import com.google.android.gms.common.api.ApiException;
+//import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GoogleApiAvailability;
 import com.google.android.gms.safetynet.SafetyNet;
 import com.google.android.gms.safetynet.SafetyNetApi;
 import com.google.android.gms.safetynet.SafetyNetApi.*;
 import com.google.android.gms.safetynet.HarmfulAppsData;
-import com.google.android.gms.safetynet.SafetyNetClient;
+//import com.google.android.gms.safetynet.SafetyNetClient;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Tasks;
+//import com.google.android.gms.tasks.Tasks;
 import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
