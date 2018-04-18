@@ -1,6 +1,6 @@
 {
   "name": "react-native-google-safetynet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "React Native implementation for Google's SafetyNet API",
   "author": "Rajiv Shah <rajivshah1@icloud.com>",
   "license": "MIT",
