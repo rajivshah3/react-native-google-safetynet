@@ -2,7 +2,7 @@
 import { NativeModules } from 'react-native';
 /* eslint-enable import/no-unresolved */
 import { generateSecureRandom } from 'react-native-securerandom';
-import { Utf8ArrayToStr } from './utils';
+import { Utf8ArrayToStr } from './src/utils';
 
 const { RNGoogleSafetyNet } = NativeModules;
 
