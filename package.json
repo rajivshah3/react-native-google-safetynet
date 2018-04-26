@@ -37,7 +37,7 @@
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react-native": "3.2.1",
     "husky": "0.14.3",
-    "lint-staged": "7.0.4",
+    "lint-staged": "7.0.5",
     "prettier": "1.12.1"
   }
 }
