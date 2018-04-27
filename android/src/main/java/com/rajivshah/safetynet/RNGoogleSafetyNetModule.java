@@ -30,6 +30,7 @@ import com.google.android.gms.tasks.Task;
 
 import java.io.IOException;
 import java.util.List;
+import java.nio.charset.StandardCharsets;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
@@ -68,12 +69,13 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   /**
    * Send a request to the SafetyNet Attestation API
    * See https://developer.android.com/training/safetynet/attestation.html#compat-check-request
-   * @param nonce
+   * @param nonceString
    * @param apiKey
    * @param promise
    */
   @ReactMethod
-  public void sendAttestationRequest(byte[] nonce, String apiKey, final Promise promise){
+  public void sendAttestationRequest(String nonceString, String apiKey, final Promise promise){
+    byte[] nonce = stringToBytes(nonceString);
     SafetyNet.getClient(baseContext).attest(nonce, apiKey)
     .addOnSuccessListener(activity,
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
@@ -175,6 +177,18 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
             }
         }
     });
+  }
+
+  byte[] stringToBytes(String string) {
+    byte[] bytes;
+    bytes = string.getBytes(StandardCharsets.UTF_8);
+    return bytes;
+  }
+
+  String bytesToString(byte[] bytes) {
+    String string;
+    string = new String(bytes, StandardCharsets.UTF_8);
+    return string;
   }
 
 }

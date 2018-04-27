@@ -67,7 +67,7 @@ export function verifyAttestationResponse(originalNonce, response) {
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey)
-    .then((originalNonce, response) => verifyAttestationResponse(originalNonce, response))
+    .then(response => verifyAttestationResponse(nonce, response))
     .catch(e => e);
 }
 
