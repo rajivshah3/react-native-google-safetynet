@@ -22,7 +22,10 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-  return generateSecureRandom(length);
+  return generateSecureRandom(length).then(nonce => {
+    const nonceString = nonce.toString();
+    return nonceString;
+  });
 }
 
 /**
