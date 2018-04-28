@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.util.List;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
+import java.io.UnsupportedEncodingException;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
@@ -182,7 +183,12 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
   byte[] stringToBytes(String string) {
     byte[] bytes;
-    bytes = Base64.getDecoder().decode(new String(string).getBytes("UTF-8"));
+    bytes = null;
+    try {
+      bytes = Base64.getDecoder().decode(new String(string).getBytes("UTF-8"));
+    } catch(UnsupportedEncodingException e) {
+      e.printStackTrace();
+    }
     return bytes;
   }
 
