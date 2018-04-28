@@ -3,6 +3,7 @@ package com.rajivshah.safetynet;
 
 import android.support.annotation.NonNull;
 import android.app.Activity;
+import android.util.Log;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -77,7 +78,8 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
    */
   @ReactMethod
   public void sendAttestationRequest(String nonceString, String apiKey, final Promise promise){
-    byte[] nonce = stringToBytes(nonceString);
+    byte[] nonce;
+    nonce = stringToBytes(nonceString);
     SafetyNet.getClient(baseContext).attest(nonce, apiKey)
     .addOnSuccessListener(activity,
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
