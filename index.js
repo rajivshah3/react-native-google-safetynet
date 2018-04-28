@@ -5,6 +5,7 @@ import { generateSecureRandom } from 'react-native-securerandom';
 
 const { RNGoogleSafetyNet } = NativeModules;
 const base64js = require('base64-js');
+const jws = require('jws');
 
 /**
  * Checks if Google Play Services is available and up to date
@@ -22,7 +23,7 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-  return generateSecureRandom(length).then((nonce) => {
+  return generateSecureRandom(length).then(nonce => {
     const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
   });
@@ -36,7 +37,10 @@ export function generateNonce(length) {
  * @return {Promise}
  */
 export function sendAttestationRequest(nonce, apiKey) {
-  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);
+  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then(result => {
+    const decodedResult = jws.decode(result);
+    return decodedResult;
+  });
 }
 
 /**
@@ -46,17 +50,17 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @method verifyAttestationResponse
  * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest
  * @param  {Object} response Response from sendAttestationRequest
- * @param {String} response.nonce Nonce in response sendAttestationRequest
+ * @param {String} response.nonce Nonce in response from sendAttestationRequest
  * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing
  * @param {bool} response.basicIntegrity Device has not been tampered with
  * @return {Promise}
  * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
-  // FIXME: Fix bytearray conversion
   const nonceString = originalNonce;
-  if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
-    return Promise.resolve();
+  const decodedResponse = JSON.parse(response.payload);
+  if (nonceString === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
+    return Promise.resolve(decodedResponse);
   }
   throw new Error('Verification failed');
 }

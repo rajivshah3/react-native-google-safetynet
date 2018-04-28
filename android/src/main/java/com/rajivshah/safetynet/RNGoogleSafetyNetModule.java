@@ -34,6 +34,7 @@ import java.util.List;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.io.UnsupportedEncodingException;
+import java.lang.Error;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
@@ -79,13 +80,16 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   @ReactMethod
   public void sendAttestationRequest(String nonceString, String apiKey, final Promise promise){
     byte[] nonce;
+    Activity activity;
     nonce = stringToBytes(nonceString);
+    activity = getCurrentActivity();
     SafetyNet.getClient(baseContext).attest(nonce, apiKey)
     .addOnSuccessListener(activity,
     new OnSuccessListener<SafetyNetApi.AttestationResponse>() {
       @Override
       public void onSuccess(SafetyNetApi.AttestationResponse response) {
-        promise.resolve(response.getJwsResult());
+        String result = response.getJwsResult();
+        promise.resolve(result);
       }
     })
     .addOnFailureListener(activity, new OnFailureListener() {
@@ -183,7 +187,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     });
   }
 
-  byte[] stringToBytes(String string) {
+  private byte[] stringToBytes(String string) {
     byte[] bytes;
     bytes = null;
     try {
@@ -194,7 +198,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     return bytes;
   }
 
-  String bytesToString(byte[] bytes) {
+  private String bytesToString(byte[] bytes) {
     String string;
     string = new String(bytes, StandardCharsets.UTF_8);
     return string;
