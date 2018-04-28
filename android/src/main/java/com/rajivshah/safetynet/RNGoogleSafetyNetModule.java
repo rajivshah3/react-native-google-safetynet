@@ -31,6 +31,7 @@ import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.List;
 import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
@@ -181,7 +182,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
 
   byte[] stringToBytes(String string) {
     byte[] bytes;
-    bytes = string.getBytes(StandardCharsets.UTF_8);
+    bytes = Base64.getDecoder().decode(new String(string).getBytes("UTF-8"));
     return bytes;
   }
 

@@ -15,13 +15,20 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.{js,json}": ["prettier --write", "git add"]
+    "*.{js,json}": [
+      "prettier --write",
+      "git add"
+    ]
   },
-  "keywords": ["react-native", "safetynet"],
+  "keywords": [
+    "react-native",
+    "safetynet"
+  ],
   "peerDependencies": {
     "react-native": "^0.48.0"
   },
   "dependencies": {
+    "base64-js": "^1.3.0",
     "react-native-securerandom": "^0.1.1"
   },
   "devDependencies": {

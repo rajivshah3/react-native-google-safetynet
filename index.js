@@ -2,9 +2,9 @@
 import { NativeModules } from 'react-native';
 /* eslint-enable import/no-unresolved */
 import { generateSecureRandom } from 'react-native-securerandom';
-import { Utf8ArrayToStr } from './src/utils';
 
 const { RNGoogleSafetyNet } = NativeModules;
+const base64js = require('base64-js');
 
 /**
  * Checks if Google Play Services is available and up to date
@@ -22,8 +22,8 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-  return generateSecureRandom(length).then(nonce => {
-    const nonceString = nonce.toString();
+  return generateSecureRandom(length).then((nonce) => {
+    const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
   });
 }
@@ -53,7 +53,8 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
-  const nonceString = Utf8ArrayToStr(originalNonce);
+  // FIXME: Fix bytearray conversion
+  const nonceString = originalNonce;
   if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
     return Promise.resolve();
   }
