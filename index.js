@@ -32,7 +32,7 @@ export function generateNonce(length) {
 /**
  * Send the attestation request
  * @method sendAttestationRequest
- * @param  {Uint8Array} nonce   Randomly generated nonce
+ * @param  {String} nonce   Randomly generated nonce
  * @param  {String} apiKey  API key from Google APIs
  * @return {Promise}
  */
@@ -48,13 +48,12 @@ export function sendAttestationRequest(nonce, apiKey) {
  * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true
  * If any of those conditions are not met, an error is thrown
  * @method verifyAttestationResponse
- * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest
+ * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest
  * @param  {Object} response Response from sendAttestationRequest
  * @param {String} response.nonce Nonce in response from sendAttestationRequest
  * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing
  * @param {bool} response.basicIntegrity Device has not been tampered with
  * @return {Promise}
- * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
   const decodedResponse = JSON.parse(response.payload);
@@ -67,10 +66,9 @@ export function verifyAttestationResponse(originalNonce, response) {
 /**
  * Wrapper for sendAttestationRequest and verifyAttestationResponse
  * @method sendAndVerifyAttestation
- * @param  {Uint8Array} nonce  Randomly generated nonce
+ * @param  {String} nonce  Randomly generated nonce
  * @param  {String} apiKey API key from Google APIs
  * @return {Promise}
- * @throws {Error}
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey)
