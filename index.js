@@ -57,12 +57,11 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @throws {Error}
  */
 export function verifyAttestationResponse(originalNonce, response) {
-  const nonceString = originalNonce;
   const decodedResponse = JSON.parse(response.payload);
-  if (nonceString === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
-    return Promise.resolve(decodedResponse);
+  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
+    return Promise.resolve(false);
   }
-  throw new Error('Verification failed');
+  return Promise.resolve(true);
 }
 
 /**

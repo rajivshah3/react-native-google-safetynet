@@ -63,7 +63,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   public void isPlayServicesAvailable(final Promise promise){
     ConnectionResult result = new ConnectionResult(GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(baseContext));
     if (result.isSuccess()){
-      promise.resolve(result.toString());
+      promise.resolve(true);
     }
     else {
       promise.reject(result.getErrorMessage());
