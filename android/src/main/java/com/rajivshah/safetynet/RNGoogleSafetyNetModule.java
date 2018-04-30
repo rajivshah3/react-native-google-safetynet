@@ -4,6 +4,7 @@ package com.rajivshah.safetynet;
 import android.support.annotation.NonNull;
 import android.app.Activity;
 import android.util.Log;
+import android.util.Base64;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -32,7 +33,6 @@ import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.List;
 import java.nio.charset.StandardCharsets;
-import java.util.Base64;
 import java.io.UnsupportedEncodingException;
 import java.lang.Error;
 
@@ -191,7 +191,7 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     byte[] bytes;
     bytes = null;
     try {
-      bytes = Base64.getDecoder().decode(new String(string).getBytes("UTF-8"));
+      bytes = Base64.decode(new String(string).getBytes("UTF-8"));
     } catch(UnsupportedEncodingException e) {
       e.printStackTrace();
     }
