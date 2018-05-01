@@ -23,7 +23,7 @@ export function isPlayServicesAvailable() {
  * @return  {Promise}
  */
 export function generateNonce(length) {
-  return generateSecureRandom(length).then(nonce => {
+  return generateSecureRandom(length).then((nonce) => {
     const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
   });
@@ -37,7 +37,7 @@ export function generateNonce(length) {
  * @return {Promise}
  */
 export function sendAttestationRequest(nonce, apiKey) {
-  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then(result => {
+  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {
     const decodedResult = jws.decode(result);
     return decodedResult;
   });
@@ -72,8 +72,8 @@ export function verifyAttestationResponse(originalNonce, response) {
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey)
-    .then(response => verifyAttestationResponse(nonce, response))
-    .catch(e => e);
+    .then((response) => verifyAttestationResponse(nonce, response))
+    .catch((e) => e);
 }
 
 export default RNGoogleSafetyNet;

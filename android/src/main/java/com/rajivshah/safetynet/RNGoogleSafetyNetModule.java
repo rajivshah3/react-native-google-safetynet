@@ -33,7 +33,7 @@ import com.google.android.gms.tasks.Task;
 import java.io.IOException;
 import java.util.List;
 import java.nio.charset.StandardCharsets;
-import java.io.UnsupportedEncodingException;
+import java.lang.IllegalArgumentException;
 import java.lang.Error;
 
 public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
@@ -191,8 +191,8 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     byte[] bytes;
     bytes = null;
     try {
-      bytes = Base64.decode(new String(string).getBytes("UTF-8"));
-    } catch(UnsupportedEncodingException e) {
+      bytes = Base64.decode(string, Base64.DEFAULT);
+    } catch(IllegalArgumentException e) {
       e.printStackTrace();
     }
     return bytes;
