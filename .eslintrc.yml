@@ -2,3 +2,4 @@ extends: airbnb-base
 rules:
   import/extensions: off
   max-len: off
+  arrow-parens: [2, "always"]
