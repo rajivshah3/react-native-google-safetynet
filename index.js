@@ -71,9 +71,7 @@ export function verifyAttestationResponse(originalNonce, response) {
  * @return {Promise}
  */
 export function sendAndVerifyAttestation(nonce, apiKey) {
-  return sendAttestationRequest(nonce, apiKey)
-    .then((response) => verifyAttestationResponse(nonce, response))
-    .catch((e) => e);
+  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));
 }
 
 export default RNGoogleSafetyNet;
