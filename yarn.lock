@@ -2562,9 +2562,9 @@ qs@~6.5.1:
   version "6.5.1"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.1.tgz#349cdf6eef89ec45c12d7d5eb3fc0c870343a6d8"
 
-react-native-securerandom@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/react-native-securerandom/-/react-native-securerandom-0.1.1.tgz#f130623a412c338b0afadedbc204c5cbb8bf2070"
+react-native-securerandom@^0.2.0:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-securerandom/-/react-native-securerandom-0.2.0.tgz#8df331c3db954d7a02f7152f688a1bf43912e554"
   dependencies:
     base64-js "*"
 
