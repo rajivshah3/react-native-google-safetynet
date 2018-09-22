@@ -12,7 +12,7 @@ const jws = require('jws');
  * @method isPlayServicesAvailable
  * @return {Promise}
  */
-export function isPlayServicesAvailable() {
+function isPlayServicesAvailable() {
   return RNGoogleSafetyNet.isPlayServicesAvailable();
 }
 
@@ -22,7 +22,7 @@ export function isPlayServicesAvailable() {
  * @param  {int} length
  * @return  {Promise}
  */
-export function generateNonce(length) {
+function generateNonce(length) {
   return generateSecureRandom(length).then((nonce) => {
     const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
@@ -36,7 +36,7 @@ export function generateNonce(length) {
  * @param  {String} apiKey  API key from Google APIs
  * @return {Promise}
  */
-export function sendAttestationRequest(nonce, apiKey) {
+function sendAttestationRequest(nonce, apiKey) {
   return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {
     const decodedResult = jws.decode(result);
     return decodedResult;
@@ -55,7 +55,7 @@ export function sendAttestationRequest(nonce, apiKey) {
  * @param {bool} response.basicIntegrity Device has not been tampered with
  * @return {Promise}
  */
-export function verifyAttestationResponse(originalNonce, response) {
+function verifyAttestationResponse(originalNonce, response) {
   const decodedResponse = JSON.parse(response.payload);
   if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
     return Promise.resolve(false);
@@ -70,8 +70,14 @@ export function verifyAttestationResponse(originalNonce, response) {
  * @param  {String} apiKey API key from Google APIs
  * @return {Promise}
  */
-export function sendAndVerifyAttestation(nonce, apiKey) {
+function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));
 }
 
-export default RNGoogleSafetyNet;
+export default {
+  isPlayServicesAvailable,
+  generateNonce,
+  sendAttestationRequest,
+  verifyAttestationResponse,
+  sendAndVerifyAttestation,
+};
