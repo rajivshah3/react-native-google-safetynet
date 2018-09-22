@@ -12,7 +12,8 @@
     "docs": "./node_modules/.bin/esdoc",
     "format": "prettier --write \"**/*.{js,json}\"",
     "lint": "./node_modules/.bin/eslint .",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "version": "./node_modules/.bin/auto-changelog -p"
   },
   "lint-staged": {
     "*.{js,json}": [
@@ -33,6 +34,7 @@
     "react-native-securerandom": "^0.1.1"
   },
   "devDependencies": {
+    "auto-changelog": "^1.8.0",
     "babel-eslint": "9.0.0",
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
