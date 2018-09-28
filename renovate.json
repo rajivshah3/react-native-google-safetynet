@@ -3,5 +3,8 @@
   "baseBranches": ["develop"],
   "ignoreDeps": ["react-native"],
   "schedule": ["after 12am and before 5am every day"],
-  "timezone": "America/New_York"
+  "timezone": "America/New_York",
+  "devDependencies: {
+    "enabled": false
+  }
 }
