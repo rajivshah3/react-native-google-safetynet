@@ -3,7 +3,7 @@
   "baseBranches": ["develop"],
   "ignoreDeps": ["react-native"],
   "timezone": "America/New_York",
-  "devDependencies: {
+  "devDependencies": {
     "enabled": false
   }
 }
