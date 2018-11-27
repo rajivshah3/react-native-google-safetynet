@@ -44,7 +44,7 @@ or
 See the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)
 
 ```javascript
-import RNGoogleSafetyNet from 'react-native-google-safetynet';
+import * as SafetyNet from 'react-native-google-safetynet';
 
 // TODO: What to do with the module?
 ```
