@@ -59,11 +59,12 @@ export const isPlayServicesAvailable = () =&gt; RNGoogleSafetyNet.isPlayServices
  * @param  {int} length
  * @return  {Promise}
  */
-export const generateNonce = (length) =&gt;
+export const generateNonce = (length) =&gt; {
   generateSecureRandom(length).then((nonce) =&gt; {
     const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
   });
+};
 
 /**
  * Send the attestation request
@@ -72,11 +73,12 @@ export const generateNonce = (length) =&gt;
  * @param  {String} apiKey  API key from Google APIs
  * @return {Promise}
  */
-export const sendAttestationRequest = (nonce, apiKey) =&gt;
+export const sendAttestationRequest = (nonce, apiKey) =&gt; {
   RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) =&gt; {
     const decodedResult = jws.decode(result);
     return decodedResult;
   });
+};
 
 /**
  * Verify the attestation response

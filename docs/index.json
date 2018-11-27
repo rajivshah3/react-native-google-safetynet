@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "import { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\n\nconst { RNGoogleSafetyNet } = NativeModules;\nconst base64js = require('base64-js');\nconst jws = require('jwt-decode');\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport const isPlayServicesAvailable = () => RNGoogleSafetyNet.isPlayServicesAvailable();\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport const generateNonce = (length) =>\n  generateSecureRandom(length).then((nonce) => {\n    const nonceString = base64js.fromByteArray(nonce);\n    return nonceString;\n  });\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {String} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport const sendAttestationRequest = (nonce, apiKey) =>\n  RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {\n    const decodedResult = jws.decode(result);\n    return decodedResult;\n  });\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response from sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n */\nexport const verifyAttestationResponse = (originalNonce, response) => {\n  const decodedResponse = JSON.parse(response.payload);\n  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {\n    return Promise.resolve(false);\n  }\n  return Promise.resolve(true);\n};\n\n/* eslint-disable arrow-body-style */\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {String} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n */\n\nexport const sendAndVerifyAttestation = (nonce, apiKey) => {\n  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));\n};\n/* eslint-enable arrow-body-style */\n",
+    "content": "import { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\n\nconst { RNGoogleSafetyNet } = NativeModules;\nconst base64js = require('base64-js');\nconst jws = require('jwt-decode');\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport const isPlayServicesAvailable = () => RNGoogleSafetyNet.isPlayServicesAvailable();\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport const generateNonce = (length) => {\n  generateSecureRandom(length).then((nonce) => {\n    const nonceString = base64js.fromByteArray(nonce);\n    return nonceString;\n  });\n};\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {String} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport const sendAttestationRequest = (nonce, apiKey) => {\n  RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {\n    const decodedResult = jws.decode(result);\n    return decodedResult;\n  });\n};\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response from sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n */\nexport const verifyAttestationResponse = (originalNonce, response) => {\n  const decodedResponse = JSON.parse(response.payload);\n  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {\n    return Promise.resolve(false);\n  }\n  return Promise.resolve(true);\n};\n\n/* eslint-disable arrow-body-style */\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {String} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n */\n\nexport const sendAndVerifyAttestation = (nonce, apiKey) => {\n  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));\n};\n/* eslint-enable arrow-body-style */\n",
     "static": true,
     "longname": "/Users/rajiv/safetynet/src/index.js",
     "access": "public",
@@ -724,7 +724,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": "{sendAttestationRequest}",
     "description": "Send the attestation request",
-    "lineNumber": 34,
+    "lineNumber": 35,
     "unknown": [
       {
         "tagName": "@method",
@@ -776,7 +776,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": "{verifyAttestationResponse}",
     "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-    "lineNumber": 52,
+    "lineNumber": 54,
     "unknown": [
       {
         "tagName": "@method",
@@ -858,7 +858,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": "{sendAndVerifyAttestation}",
     "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-    "lineNumber": 69,
+    "lineNumber": 71,
     "unknown": [
       {
         "tagName": "@method",
