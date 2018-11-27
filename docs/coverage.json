@@ -1,22 +1,15 @@
 {
-  "coverage": "55.55%",
-  "expectCount": 9,
+  "coverage": "62.5%",
+  "expectCount": 8,
   "actualCount": 5,
   "files": {
-    "safetynet/index.js": {
+    "src/index.js": {
       "expectCount": 8,
       "actualCount": 5,
       "undocumentLines": [
         6,
         7,
         8
-      ]
-    },
-    "safetynet/src/utils.js": {
-      "expectCount": 1,
-      "actualCount": 0,
-      "undocumentLines": [
-        11
       ]
     }
   }
