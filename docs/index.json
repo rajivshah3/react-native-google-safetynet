@@ -4,9 +4,9 @@
     "kind": "external",
     "name": "Infinity",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Infinity",
+    "longname": "safetynet/.external-ecmascript.js~Infinity",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -16,9 +16,9 @@
     "kind": "external",
     "name": "NaN",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~NaN",
+    "longname": "safetynet/.external-ecmascript.js~NaN",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -28,9 +28,9 @@
     "kind": "external",
     "name": "undefined",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~undefined",
+    "longname": "safetynet/.external-ecmascript.js~undefined",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -40,9 +40,9 @@
     "kind": "external",
     "name": "null",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~null",
+    "longname": "safetynet/.external-ecmascript.js~null",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -52,9 +52,9 @@
     "kind": "external",
     "name": "Object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Object",
+    "longname": "safetynet/.external-ecmascript.js~Object",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -64,9 +64,9 @@
     "kind": "external",
     "name": "object",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~object",
+    "longname": "safetynet/.external-ecmascript.js~object",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -76,9 +76,9 @@
     "kind": "external",
     "name": "Function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Function",
+    "longname": "safetynet/.external-ecmascript.js~Function",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -88,9 +88,9 @@
     "kind": "external",
     "name": "function",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~function",
+    "longname": "safetynet/.external-ecmascript.js~function",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -100,9 +100,9 @@
     "kind": "external",
     "name": "Boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Boolean",
+    "longname": "safetynet/.external-ecmascript.js~Boolean",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -112,9 +112,9 @@
     "kind": "external",
     "name": "boolean",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~boolean",
+    "longname": "safetynet/.external-ecmascript.js~boolean",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -124,9 +124,9 @@
     "kind": "external",
     "name": "Symbol",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Symbol",
+    "longname": "safetynet/.external-ecmascript.js~Symbol",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -136,9 +136,9 @@
     "kind": "external",
     "name": "Error",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Error",
+    "longname": "safetynet/.external-ecmascript.js~Error",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -148,9 +148,9 @@
     "kind": "external",
     "name": "EvalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~EvalError",
+    "longname": "safetynet/.external-ecmascript.js~EvalError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -160,9 +160,9 @@
     "kind": "external",
     "name": "InternalError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~InternalError",
+    "longname": "safetynet/.external-ecmascript.js~InternalError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -172,9 +172,9 @@
     "kind": "external",
     "name": "RangeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~RangeError",
+    "longname": "safetynet/.external-ecmascript.js~RangeError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -184,9 +184,9 @@
     "kind": "external",
     "name": "ReferenceError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "longname": "safetynet/.external-ecmascript.js~ReferenceError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -196,9 +196,9 @@
     "kind": "external",
     "name": "SyntaxError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "longname": "safetynet/.external-ecmascript.js~SyntaxError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -208,9 +208,9 @@
     "kind": "external",
     "name": "TypeError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~TypeError",
+    "longname": "safetynet/.external-ecmascript.js~TypeError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -220,9 +220,9 @@
     "kind": "external",
     "name": "URIError",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~URIError",
+    "longname": "safetynet/.external-ecmascript.js~URIError",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -232,9 +232,9 @@
     "kind": "external",
     "name": "Number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Number",
+    "longname": "safetynet/.external-ecmascript.js~Number",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -244,9 +244,9 @@
     "kind": "external",
     "name": "number",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~number",
+    "longname": "safetynet/.external-ecmascript.js~number",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -256,9 +256,9 @@
     "kind": "external",
     "name": "Date",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Date",
+    "longname": "safetynet/.external-ecmascript.js~Date",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -268,9 +268,9 @@
     "kind": "external",
     "name": "String",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~String",
+    "longname": "safetynet/.external-ecmascript.js~String",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -280,9 +280,9 @@
     "kind": "external",
     "name": "string",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~string",
+    "longname": "safetynet/.external-ecmascript.js~string",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -292,9 +292,9 @@
     "kind": "external",
     "name": "RegExp",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~RegExp",
+    "longname": "safetynet/.external-ecmascript.js~RegExp",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -304,9 +304,9 @@
     "kind": "external",
     "name": "Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Array",
+    "longname": "safetynet/.external-ecmascript.js~Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -316,9 +316,9 @@
     "kind": "external",
     "name": "Int8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Int8Array",
+    "longname": "safetynet/.external-ecmascript.js~Int8Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -328,9 +328,9 @@
     "kind": "external",
     "name": "Uint8Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "longname": "safetynet/.external-ecmascript.js~Uint8Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -340,9 +340,9 @@
     "kind": "external",
     "name": "Uint8ClampedArray",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "longname": "safetynet/.external-ecmascript.js~Uint8ClampedArray",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -352,9 +352,9 @@
     "kind": "external",
     "name": "Int16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Int16Array",
+    "longname": "safetynet/.external-ecmascript.js~Int16Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -364,9 +364,9 @@
     "kind": "external",
     "name": "Uint16Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "longname": "safetynet/.external-ecmascript.js~Uint16Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -376,9 +376,9 @@
     "kind": "external",
     "name": "Int32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Int32Array",
+    "longname": "safetynet/.external-ecmascript.js~Int32Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -388,9 +388,9 @@
     "kind": "external",
     "name": "Uint32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "longname": "safetynet/.external-ecmascript.js~Uint32Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -400,9 +400,9 @@
     "kind": "external",
     "name": "Float32Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Float32Array",
+    "longname": "safetynet/.external-ecmascript.js~Float32Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -412,9 +412,9 @@
     "kind": "external",
     "name": "Float64Array",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Float64Array",
+    "longname": "safetynet/.external-ecmascript.js~Float64Array",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -424,9 +424,9 @@
     "kind": "external",
     "name": "Map",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Map",
+    "longname": "safetynet/.external-ecmascript.js~Map",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -436,9 +436,9 @@
     "kind": "external",
     "name": "Set",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Set",
+    "longname": "safetynet/.external-ecmascript.js~Set",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -448,9 +448,9 @@
     "kind": "external",
     "name": "WeakMap",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~WeakMap",
+    "longname": "safetynet/.external-ecmascript.js~WeakMap",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -460,9 +460,9 @@
     "kind": "external",
     "name": "WeakSet",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~WeakSet",
+    "longname": "safetynet/.external-ecmascript.js~WeakSet",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -472,9 +472,9 @@
     "kind": "external",
     "name": "ArrayBuffer",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "longname": "safetynet/.external-ecmascript.js~ArrayBuffer",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -484,9 +484,9 @@
     "kind": "external",
     "name": "DataView",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~DataView",
+    "longname": "safetynet/.external-ecmascript.js~DataView",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -496,9 +496,9 @@
     "kind": "external",
     "name": "JSON",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~JSON",
+    "longname": "safetynet/.external-ecmascript.js~JSON",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -508,9 +508,9 @@
     "kind": "external",
     "name": "Promise",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Promise",
+    "longname": "safetynet/.external-ecmascript.js~Promise",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -520,9 +520,9 @@
     "kind": "external",
     "name": "Generator",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Generator",
+    "longname": "safetynet/.external-ecmascript.js~Generator",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -532,9 +532,9 @@
     "kind": "external",
     "name": "GeneratorFunction",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "longname": "safetynet/.external-ecmascript.js~GeneratorFunction",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -544,9 +544,9 @@
     "kind": "external",
     "name": "Reflect",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Reflect",
+    "longname": "safetynet/.external-ecmascript.js~Reflect",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -556,9 +556,9 @@
     "kind": "external",
     "name": "Proxy",
     "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
-    "memberof": "src/.external-ecmascript.js",
+    "memberof": "safetynet/.external-ecmascript.js",
     "static": true,
-    "longname": "src/.external-ecmascript.js~Proxy",
+    "longname": "safetynet/.external-ecmascript.js~Proxy",
     "access": "public",
     "description": "",
     "builtinExternal": true
@@ -566,10 +566,10 @@
   {
     "__docId__": 48,
     "kind": "file",
-    "name": "src/index.js",
-    "content": "import { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\nimport { Utf8ArrayToStr } from './utils';\n\nconst { RNGoogleSafetyNet } = NativeModules;\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport function isPlayServicesAvailable() {\n    return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport function generateNonce(length) {\n    return generateSecureRandom(length);\n}\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {Uint8Array} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport function sendAttestationRequest(nonce, apiKey) {\n    return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey);\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {Uint8Array} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n * @throws {Error}\n */\nexport function verifyAttestationResponse(originalNonce, response) {\n    const nonceString = Utf8ArrayToStr(originalNonce);\n    if (nonceString === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {\n        return Promise.resolve();\n    } else {\n        throw new Error('Verification failed');\n    }\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {Uint8Array} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n * @throws {Error}\n */\nexport function sendAndVerifyAttestation(nonce, apiKey) {\n    return sendAttestationRequest(nonce, apiKey)\n        .then(function(originalNonce, response) {\n            return verifyAttestationResponse(originalNonce, response);\n        })\n        .catch(function(e) {\n            return e;\n        });\n}\n\nexport default RNGoogleSafetyNet;\n",
+    "name": "safetynet/index.js",
+    "content": "/* eslint-disable import/no-unresolved */\nimport { NativeModules } from 'react-native';\n/* eslint-enable import/no-unresolved */\nimport { generateSecureRandom } from 'react-native-securerandom';\n\nconst { RNGoogleSafetyNet } = NativeModules;\nconst base64js = require('base64-js');\nconst jws = require('jwt-decode');\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nfunction isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nfunction generateNonce(length) {\n  return generateSecureRandom(length).then((nonce) => {\n    const nonceString = base64js.fromByteArray(nonce);\n    return nonceString;\n  });\n}\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {String} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nfunction sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {\n    const decodedResult = jws.decode(result);\n    return decodedResult;\n  });\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response from sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n */\nfunction verifyAttestationResponse(originalNonce, response) {\n  const decodedResponse = JSON.parse(response.payload);\n  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {\n    return Promise.resolve(false);\n  }\n  return Promise.resolve(true);\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {String} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n */\nfunction sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));\n}\n\nexport default {\n  isPlayServicesAvailable,\n  generateNonce,\n  sendAttestationRequest,\n  verifyAttestationResponse,\n  sendAndVerifyAttestation,\n};\n",
     "static": true,
-    "longname": "/Users/rajiv/google-safetynet/src/index.js",
+    "longname": "/Users/rajiv/safetynet/index.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
@@ -578,15 +578,15 @@
     "__docId__": 49,
     "kind": "variable",
     "name": "RNGoogleSafetyNet",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "static": true,
-    "longname": "src/index.js~RNGoogleSafetyNet",
+    "longname": "safetynet/index.js~RNGoogleSafetyNet",
     "access": "public",
     "export": false,
-    "importPath": "react-native-google-safetynet/src/index.js",
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
     "importStyle": null,
     "description": null,
-    "lineNumber": 5,
+    "lineNumber": 6,
     "undocument": true,
     "type": {
       "types": [
@@ -597,19 +597,61 @@
   },
   {
     "__docId__": 50,
+    "kind": "variable",
+    "name": "base64js",
+    "memberof": "safetynet/index.js",
+    "static": true,
+    "longname": "safetynet/index.js~base64js",
+    "access": "public",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "jws",
+    "memberof": "safetynet/index.js",
+    "static": true,
+    "longname": "safetynet/index.js~jws",
+    "access": "public",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
     "kind": "function",
     "name": "isPlayServicesAvailable",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/index.js~isPlayServicesAvailable",
+    "longname": "safetynet/index.js~isPlayServicesAvailable",
     "access": "public",
-    "export": true,
-    "importPath": "react-native-google-safetynet/src/index.js",
-    "importStyle": "{isPlayServicesAvailable}",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
     "description": "Checks if Google Play Services is available and up to date",
-    "lineNumber": 12,
+    "lineNumber": 15,
     "unknown": [
       {
         "tagName": "@method",
@@ -624,23 +666,24 @@
       "spread": false,
       "description": ""
     },
-    "params": []
+    "params": [],
+    "ignore": true
   },
   {
-    "__docId__": 51,
+    "__docId__": 53,
     "kind": "function",
     "name": "generateNonce",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/index.js~generateNonce",
+    "longname": "safetynet/index.js~generateNonce",
     "access": "public",
-    "export": true,
-    "importPath": "react-native-google-safetynet/src/index.js",
-    "importStyle": "{generateNonce}",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
     "description": "Generate the nonce using react-native-securerandom",
-    "lineNumber": 22,
+    "lineNumber": 25,
     "unknown": [
       {
         "tagName": "@method",
@@ -666,23 +709,24 @@
       ],
       "spread": false,
       "description": ""
-    }
+    },
+    "ignore": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 54,
     "kind": "function",
     "name": "sendAttestationRequest",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/index.js~sendAttestationRequest",
+    "longname": "safetynet/index.js~sendAttestationRequest",
     "access": "public",
-    "export": true,
-    "importPath": "react-native-google-safetynet/src/index.js",
-    "importStyle": "{sendAttestationRequest}",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
     "description": "Send the attestation request",
-    "lineNumber": 33,
+    "lineNumber": 39,
     "unknown": [
       {
         "tagName": "@method",
@@ -693,7 +737,7 @@
       {
         "nullable": null,
         "types": [
-          "Uint8Array"
+          "String"
         ],
         "spread": false,
         "optional": false,
@@ -718,23 +762,24 @@
       ],
       "spread": false,
       "description": ""
-    }
+    },
+    "ignore": true
   },
   {
-    "__docId__": 53,
+    "__docId__": 55,
     "kind": "function",
     "name": "verifyAttestationResponse",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/index.js~verifyAttestationResponse",
+    "longname": "safetynet/index.js~verifyAttestationResponse",
     "access": "public",
-    "export": true,
-    "importPath": "react-native-google-safetynet/src/index.js",
-    "importStyle": "{verifyAttestationResponse}",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
     "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-    "lineNumber": 50,
+    "lineNumber": 58,
     "unknown": [
       {
         "tagName": "@method",
@@ -745,7 +790,7 @@
       {
         "nullable": null,
         "types": [
-          "Uint8Array"
+          "String"
         ],
         "spread": false,
         "optional": false,
@@ -770,7 +815,7 @@
         "spread": false,
         "optional": false,
         "name": "response.nonce",
-        "description": "Nonce in response sendAttestationRequest"
+        "description": "Nonce in response from sendAttestationRequest"
       },
       {
         "nullable": null,
@@ -801,30 +846,23 @@
       "spread": false,
       "description": ""
     },
-    "throws": [
-      {
-        "types": [
-          "Error"
-        ],
-        "description": ""
-      }
-    ]
+    "ignore": true
   },
   {
-    "__docId__": 54,
+    "__docId__": 56,
     "kind": "function",
     "name": "sendAndVerifyAttestation",
-    "memberof": "src/index.js",
+    "memberof": "safetynet/index.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/index.js~sendAndVerifyAttestation",
+    "longname": "safetynet/index.js~sendAndVerifyAttestation",
     "access": "public",
-    "export": true,
-    "importPath": "react-native-google-safetynet/src/index.js",
-    "importStyle": "{sendAndVerifyAttestation}",
+    "export": false,
+    "importPath": "react-native-google-safetynet/safetynet/index.js",
+    "importStyle": null,
     "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-    "lineNumber": 67,
+    "lineNumber": 73,
     "unknown": [
       {
         "tagName": "@method",
@@ -835,7 +873,7 @@
       {
         "nullable": null,
         "types": [
-          "Uint8Array"
+          "String"
         ],
         "spread": false,
         "optional": false,
@@ -861,38 +899,31 @@
       "spread": false,
       "description": ""
     },
-    "throws": [
-      {
-        "types": [
-          "Error"
-        ],
-        "description": ""
-      }
-    ]
+    "ignore": true
   },
   {
-    "__docId__": 55,
+    "__docId__": 57,
     "kind": "file",
-    "name": "src/utils.js",
-    "content": "// http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt\n\n/* utf.js - UTF-8 <=> UTF-16 convertion\n *\n * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>\n * Version: 1.0\n * LastModified: Dec 25 1999\n * This library is free.  You can redistribute it and/or modify it.\n */\n\nexport function Utf8ArrayToStr(array) {\n    var out, i, len, c;\n    var char2, char3;\n\n    out = '';\n    len = array.length;\n    i = 0;\n    while (i < len) {\n        c = array[i++];\n        switch (c >> 4) {\n            case 0:\n            case 1:\n            case 2:\n            case 3:\n            case 4:\n            case 5:\n            case 6:\n            case 7:\n                // 0xxxxxxx\n                out += String.fromCharCode(c);\n                break;\n            case 12:\n            case 13:\n                // 110x xxxx   10xx xxxx\n                char2 = array[i++];\n                out += String.fromCharCode(((c & 0x1f) << 6) | (char2 & 0x3f));\n                break;\n            case 14:\n                // 1110 xxxx  10xx xxxx  10xx xxxx\n                char2 = array[i++];\n                char3 = array[i++];\n                out += String.fromCharCode(((c & 0x0f) << 12) | ((char2 & 0x3f) << 6) | ((char3 & 0x3f) << 0));\n                break;\n        }\n    }\n\n    return out;\n}\n",
+    "name": "safetynet/src/utils.js",
+    "content": "// http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt\n\n/* utf.js - UTF-8 <=> UTF-16 convertion\n *\n * Copyright (C) 1999 Masanao Izumo <iz@onicos.co.jp>\n * Version: 1.0\n * LastModified: Dec 25 1999\n * This library is free.  You can redistribute it and/or modify it.\n */\n\nexport function Utf8ArrayToStr(array) {\n  var out, i, len, c;\n  var char2, char3;\n\n  out = '';\n  len = array.length;\n  i = 0;\n  while (i < len) {\n    c = array[i++];\n    switch (c >> 4) {\n      case 0:\n      case 1:\n      case 2:\n      case 3:\n      case 4:\n      case 5:\n      case 6:\n      case 7:\n        // 0xxxxxxx\n        out += String.fromCharCode(c);\n        break;\n      case 12:\n      case 13:\n        // 110x xxxx   10xx xxxx\n        char2 = array[i++];\n        out += String.fromCharCode(((c & 0x1f) << 6) | (char2 & 0x3f));\n        break;\n      case 14:\n        // 1110 xxxx  10xx xxxx  10xx xxxx\n        char2 = array[i++];\n        char3 = array[i++];\n        out += String.fromCharCode(((c & 0x0f) << 12) | ((char2 & 0x3f) << 6) | ((char3 & 0x3f) << 0));\n        break;\n    }\n  }\n\n  return out;\n}\n",
     "static": true,
-    "longname": "/Users/rajiv/google-safetynet/src/utils.js",
+    "longname": "/Users/rajiv/safetynet/src/utils.js",
     "access": "public",
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 56,
+    "__docId__": 58,
     "kind": "function",
     "name": "Utf8ArrayToStr",
-    "memberof": "src/utils.js",
+    "memberof": "safetynet/src/utils.js",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/utils.js~Utf8ArrayToStr",
+    "longname": "safetynet/src/utils.js~Utf8ArrayToStr",
     "access": "public",
     "export": true,
-    "importPath": "react-native-google-safetynet/src/utils.js",
+    "importPath": "react-native-google-safetynet/safetynet/src/utils.js",
     "importStyle": "{Utf8ArrayToStr}",
     "description": null,
     "lineNumber": 11,
@@ -913,16 +944,16 @@
   },
   {
     "kind": "index",
-    "content": "\n# SafetyNet for React Native\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n\nSee the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)\n\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
-    "longname": "/Users/rajiv/google-safetynet/README.md",
+    "content": "\n# SafetyNet for React Native\n\n[![GitHub version](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet.svg)](https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet) [![Maintainability](https://api.codeclimate.com/v1/badges/dfa536260a3131540826/maintainability)](https://codeclimate.com/github/rajivshah3/react-native-google-safetynet/maintainability) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/de3c4e6e440f4cdf93492ddd5b41ace1)](https://app.codacy.com/app/rajivshah3/react-native-google-safetynet?utm_source=github.com&utm_medium=referral&utm_content=rajivshah3/react-native-google-safetynet&utm_campaign=badger)\n[![Build Status](https://app.bitrise.io/app/6a320b4cec355721/status.svg?token=CsqSRP-i2_BC8a2ne-7-pw&branch=develop)](https://app.bitrise.io/app/6a320b4cec355721)\n\n\n## About SafetyNet\nGoogle provides an API to verify device integrity and detect harmful apps. See the [SafetyNet documentation](https://developer.android.com/training/safetynet/index.html) for more information.\n\n## Getting started\n\n`$ npm install react-native-google-safetynet --save`\n\nor\n\n`$ yarn add react-native-google-safetynet`\n\n### Mostly automatic installation\n\n`$ react-native link react-native-google-safetynet`\n\n### Manual installation\n\n\n#### Android\n\n1. Open up `android/app/src/main/java/[...]/MainActivity.java`\n  - Add `import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;` to the imports at the top of the file\n  - Add `new RNGoogleSafetyNetPackage()` to the list returned by the `getPackages()` method\n2. Append the following lines to `android/settings.gradle`:\n  \t```\n  \tinclude ':react-native-google-safetynet'\n  \tproject(':react-native-google-safetynet').projectDir = new File(rootProject.projectDir, \t'../node_modules/react-native-google-safetynet/android')\n  \t```\n3. Insert the following lines inside the dependencies block in `android/app/build.gradle`:\n  \t```\n      compile project(':react-native-google-safetynet')\n  \t```\n\n\n## Usage\n\nSee the full documentation [here](https://rajivshah3.github.io/react-native-google-safetynet/)\n\n```javascript\nimport RNGoogleSafetyNet from 'react-native-google-safetynet';\n\n// TODO: What to do with the module?\n```\n",
+    "longname": "/Users/rajiv/safetynet/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"
   },
   {
     "kind": "packageJSON",
-    "content": "{\n    \"name\": \"react-native-google-safetynet\",\n    \"version\": \"0.0.4\",\n    \"description\": \"React Native implementation for Google's SafetyNet API\",\n    \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n    \"license\": \"MIT\",\n    \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n    \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n    \"main\": \"index.js\",\n    \"scripts\": {\n        \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n        \"docs\": \"./node_modules/.bin/esdoc\",\n        \"format\": \"prettier --write \\\"**/*.{js,json}\\\"\",\n        \"precommit\": \"lint-staged\"\n    },\n    \"lint-staged\": {\n        \"*.{js,json}\": [\"prettier --write\", \"git add\"]\n    },\n    \"keywords\": [\"react-native\", \"safetynet\"],\n    \"peerDependencies\": {\n        \"react-native\": \"^0.48.0\"\n    },\n    \"dependencies\": {\n        \"react-native-securerandom\": \"^0.1.1\"\n    },\n    \"devDependencies\": {\n        \"babel-eslint\": \"^8.2.2\",\n        \"esdoc\": \"^1.0.4\",\n        \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n        \"esdoc-standard-plugin\": \"^1.0.0\",\n        \"eslint\": \"^4.19.1\",\n        \"eslint-plugin-babel\": \"^5.0.0\",\n        \"eslint-plugin-import\": \"^2.10.0\",\n        \"eslint-plugin-react-native\": \"^3.2.1\",\n        \"husky\": \"^0.14.3\",\n        \"lint-staged\": \"^7.0.4\",\n        \"prettier\": \"^1.11.1\"\n    }\n}\n",
-    "longname": "/Users/rajiv/google-safetynet/package.json",
+    "content": "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.3.3\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\",\n    \"format\": \"prettier --write \\\"**/*.{js,json}\\\"\",\n    \"lint\": \"./node_modules/.bin/eslint .\",\n    \"precommit\": \"lint-staged\",\n    \"version\": \"./node_modules/.bin/auto-changelog -p\"\n  },\n  \"lint-staged\": {\n    \"*.{js,json}\": [\n      \"prettier --write\",\n      \"git add\"\n    ]\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"base64-js\": \"^1.3.0\",\n    \"jwt-decode\": \"^2.2.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"auto-changelog\": \"^1.8.0\",\n    \"babel-eslint\": \"9.0.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"eslint\": \"5.9.0\",\n    \"eslint-config-airbnb-base\": \"13.1.0\",\n    \"eslint-config-prettier\": \"3.3.0\",\n    \"eslint-plugin-babel\": \"5.3.0\",\n    \"eslint-plugin-import\": \"2.14.0\",\n    \"eslint-plugin-prettier\": \"2.6.2\",\n    \"eslint-plugin-react-native\": \"3.3.0\",\n    \"husky\": \"0.14.3\",\n    \"lint-staged\": \"7.3.0\",\n    \"prettier\": \"1.15.2\",\n    \"react-native\": \"0.51.0\"\n  }\n}\n",
+    "longname": "/Users/rajiv/safetynet/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"

@@ -2,8 +2,8 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <base data-ice="baseUrl" href="">
-  <title data-ice="title">Source | react-native-google-safetynet</title>
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">safetynet/src/utils.js | react-native-google-safetynet</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
@@ -34,39 +34,57 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><h1>Source <img data-ice="coverageBadge" src="./badge.svg"><span data-ice="totalCoverageCount" class="total-coverage-count">5/9</span></h1>
+<div class="content" data-ice="content"><h1 data-ice="title">safetynet/src/utils.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// http://www.onicos.com/staff/iz/amuse/javascript/expert/utf.txt
 
-<table class="files-summary" data-ice="files" data-use-coverage="true">
-  <thead>
-    <tr>
-      <td>File</td>
-      <td>Identifier</td>
-      <td class="coverage">Document</td>
-      <td style="display: none;">Size</td>
-      <td style="display: none;">Lines</td>
-      <td style="display: none;">Updated</td>
-    </tr>
-  </thead>
-  <tbody>
-    
-  <tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/safetynet/index.js.html#errorLines=6,7,8">safetynet/index.js</a></span></td>
-      <td data-ice="identifier" class="identifiers">-</td>
-      <td class="coverage"><span data-ice="coverage">62 %</span><span data-ice="coverageCount" class="coverage-count">5/8</span></td>
-      <td style="display: none;" data-ice="size">2824 byte</td>
-      <td style="display: none;" data-ice="lines">83</td>
-      <td style="display: none;" data-ice="updated">2018-11-03 04:15:04 (UTC)</td>
-    </tr>
-<tr data-ice="file">
-      <td data-ice="filePath"><span><a href="file/safetynet/src/utils.js.html#errorLines=11">safetynet/src/utils.js</a></span></td>
-      <td data-ice="identifier" class="identifiers"><span><a href="function/index.html#static-function-Utf8ArrayToStr">Utf8ArrayToStr</a></span></td>
-      <td class="coverage"><span data-ice="coverage">0 %</span><span data-ice="coverageCount" class="coverage-count">0/1</span></td>
-      <td style="display: none;" data-ice="size">1094 byte</td>
-      <td style="display: none;" data-ice="lines">48</td>
-      <td style="display: none;" data-ice="updated">2018-11-03 04:15:04 (UTC)</td>
-    </tr>
-</tbody>
-</table>
+/* utf.js - UTF-8 &lt;=&gt; UTF-16 convertion
+ *
+ * Copyright (C) 1999 Masanao Izumo &lt;iz@onicos.co.jp&gt;
+ * Version: 1.0
+ * LastModified: Dec 25 1999
+ * This library is free.  You can redistribute it and/or modify it.
+ */
+
+export function Utf8ArrayToStr(array) {
+  var out, i, len, c;
+  var char2, char3;
+
+  out = &apos;&apos;;
+  len = array.length;
+  i = 0;
+  while (i &lt; len) {
+    c = array[i++];
+    switch (c &gt;&gt; 4) {
+      case 0:
+      case 1:
+      case 2:
+      case 3:
+      case 4:
+      case 5:
+      case 6:
+      case 7:
+        // 0xxxxxxx
+        out += String.fromCharCode(c);
+        break;
+      case 12:
+      case 13:
+        // 110x xxxx   10xx xxxx
+        char2 = array[i++];
+        out += String.fromCharCode(((c &amp; 0x1f) &lt;&lt; 6) | (char2 &amp; 0x3f));
+        break;
+      case 14:
+        // 1110 xxxx  10xx xxxx  10xx xxxx
+        char2 = array[i++];
+        char3 = array[i++];
+        out += String.fromCharCode(((c &amp; 0x0f) &lt;&lt; 12) | ((char2 &amp; 0x3f) &lt;&lt; 6) | ((char3 &amp; 0x3f) &lt;&lt; 0));
+        break;
+    }
+  }
+
+  return out;
+}
+</code></pre>
+
 </div>
 
 <footer class="footer">
