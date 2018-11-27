@@ -1,6 +1,5 @@
 {
-  "source": ".",
-  "excludes": ["node_modules", "docs", "android"],
+  "source": "./src",
   "destination": "./docs",
   "plugins": [
     {
