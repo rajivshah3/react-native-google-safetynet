@@ -1,6 +1,4 @@
-/* eslint-disable import/no-unresolved */
 import { NativeModules } from 'react-native';
-/* eslint-enable import/no-unresolved */
 import { generateSecureRandom } from 'react-native-securerandom';
 
 const { RNGoogleSafetyNet } = NativeModules;
@@ -12,9 +10,7 @@ const jws = require('jwt-decode');
  * @method isPlayServicesAvailable
  * @return {Promise}
  */
-function isPlayServicesAvailable() {
-  return RNGoogleSafetyNet.isPlayServicesAvailable();
-}
+export const isPlayServicesAvailable = () => RNGoogleSafetyNet.isPlayServicesAvailable();
 
 /**
  * Generate the nonce using react-native-securerandom
@@ -22,12 +18,11 @@ function isPlayServicesAvailable() {
  * @param  {int} length
  * @return  {Promise}
  */
-function generateNonce(length) {
-  return generateSecureRandom(length).then((nonce) => {
+export const generateNonce = (length) =>
+  generateSecureRandom(length).then((nonce) => {
     const nonceString = base64js.fromByteArray(nonce);
     return nonceString;
   });
-}
 
 /**
  * Send the attestation request
@@ -36,12 +31,11 @@ function generateNonce(length) {
  * @param  {String} apiKey  API key from Google APIs
  * @return {Promise}
  */
-function sendAttestationRequest(nonce, apiKey) {
-  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {
+export const sendAttestationRequest = (nonce, apiKey) =>
+  RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {
     const decodedResult = jws.decode(result);
     return decodedResult;
   });
-}
 
 /**
  * Verify the attestation response
@@ -55,14 +49,15 @@ function sendAttestationRequest(nonce, apiKey) {
  * @param {bool} response.basicIntegrity Device has not been tampered with
  * @return {Promise}
  */
-function verifyAttestationResponse(originalNonce, response) {
+export const verifyAttestationResponse = (originalNonce, response) => {
   const decodedResponse = JSON.parse(response.payload);
   if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
     return Promise.resolve(false);
   }
   return Promise.resolve(true);
-}
+};
 
+/* eslint-disable arrow-body-style */
 /**
  * Wrapper for sendAttestationRequest and verifyAttestationResponse
  * @method sendAndVerifyAttestation
@@ -70,14 +65,8 @@ function verifyAttestationResponse(originalNonce, response) {
  * @param  {String} apiKey API key from Google APIs
  * @return {Promise}
  */
-function sendAndVerifyAttestation(nonce, apiKey) {
-  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));
-}
 
-export default {
-  isPlayServicesAvailable,
-  generateNonce,
-  sendAttestationRequest,
-  verifyAttestationResponse,
-  sendAndVerifyAttestation,
+export const sendAndVerifyAttestation = (nonce, apiKey) => {
+  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));
 };
+/* eslint-enable arrow-body-style */
