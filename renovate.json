@@ -1,9 +1,0 @@
-{
-  "extends": ["config:base"],
-  "baseBranches": ["develop"],
-  "ignoreDeps": ["react-native"],
-  "timezone": "America/New_York",
-  "devDependencies": {
-    "enabled": false
-  }
-}
