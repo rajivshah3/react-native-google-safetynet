@@ -1,5 +1,35 @@
 window.esdocSearchIndex = [
   [
+    "react-native-google-safetynet~generatenonce",
+    "function/index.html#static-function-generateNonce",
+    "<span>generateNonce</span> <span class=\"search-result-import-path\">react-native-google-safetynet</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet~isplayservicesavailable",
+    "function/index.html#static-function-isPlayServicesAvailable",
+    "<span>isPlayServicesAvailable</span> <span class=\"search-result-import-path\">react-native-google-safetynet</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet~sendandverifyattestation",
+    "function/index.html#static-function-sendAndVerifyAttestation",
+    "<span>sendAndVerifyAttestation</span> <span class=\"search-result-import-path\">react-native-google-safetynet</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet~sendattestationrequest",
+    "function/index.html#static-function-sendAttestationRequest",
+    "<span>sendAttestationRequest</span> <span class=\"search-result-import-path\">react-native-google-safetynet</span>",
+    "function"
+  ],
+  [
+    "react-native-google-safetynet~verifyattestationresponse",
+    "function/index.html#static-function-verifyAttestationResponse",
+    "<span>verifyAttestationResponse</span> <span class=\"search-result-import-path\">react-native-google-safetynet</span>",
+    "function"
+  ],
+  [
     "src/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
     "src/.external-ecmascript.js~Array",

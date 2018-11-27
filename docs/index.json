@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "/* eslint-disable import/no-unresolved */\nimport { NativeModules } from 'react-native';\n/* eslint-enable import/no-unresolved */\nimport { generateSecureRandom } from 'react-native-securerandom';\n\nconst { RNGoogleSafetyNet } = NativeModules;\nconst base64js = require('base64-js');\nconst jws = require('jwt-decode');\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nfunction isPlayServicesAvailable() {\n  return RNGoogleSafetyNet.isPlayServicesAvailable();\n}\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nfunction generateNonce(length) {\n  return generateSecureRandom(length).then((nonce) => {\n    const nonceString = base64js.fromByteArray(nonce);\n    return nonceString;\n  });\n}\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {String} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nfunction sendAttestationRequest(nonce, apiKey) {\n  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {\n    const decodedResult = jws.decode(result);\n    return decodedResult;\n  });\n}\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response from sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n */\nfunction verifyAttestationResponse(originalNonce, response) {\n  const decodedResponse = JSON.parse(response.payload);\n  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {\n    return Promise.resolve(false);\n  }\n  return Promise.resolve(true);\n}\n\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {String} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n */\nfunction sendAndVerifyAttestation(nonce, apiKey) {\n  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));\n}\n\nexport default {\n  isPlayServicesAvailable,\n  generateNonce,\n  sendAttestationRequest,\n  verifyAttestationResponse,\n  sendAndVerifyAttestation,\n};\n",
+    "content": "import { NativeModules } from 'react-native';\nimport { generateSecureRandom } from 'react-native-securerandom';\n\nconst { RNGoogleSafetyNet } = NativeModules;\nconst base64js = require('base64-js');\nconst jws = require('jwt-decode');\n\n/**\n * Checks if Google Play Services is available and up to date\n * @method isPlayServicesAvailable\n * @return {Promise}\n */\nexport const isPlayServicesAvailable = () => RNGoogleSafetyNet.isPlayServicesAvailable();\n\n/**\n * Generate the nonce using react-native-securerandom\n * @method generateNonce\n * @param  {int} length\n * @return  {Promise}\n */\nexport const generateNonce = (length) =>\n  generateSecureRandom(length).then((nonce) => {\n    const nonceString = base64js.fromByteArray(nonce);\n    return nonceString;\n  });\n\n/**\n * Send the attestation request\n * @method sendAttestationRequest\n * @param  {String} nonce   Randomly generated nonce\n * @param  {String} apiKey  API key from Google APIs\n * @return {Promise}\n */\nexport const sendAttestationRequest = (nonce, apiKey) =>\n  RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {\n    const decodedResult = jws.decode(result);\n    return decodedResult;\n  });\n\n/**\n * Verify the attestation response\n * Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\n * If any of those conditions are not met, an error is thrown\n * @method verifyAttestationResponse\n * @param  {String} originalNonce    Nonce originally provided to sendAttestationRequest\n * @param  {Object} response Response from sendAttestationRequest\n * @param {String} response.nonce Nonce in response from sendAttestationRequest\n * @param {bool} response.ctsProfileMatch Device matches a device that has passed Android Compatibility Testing\n * @param {bool} response.basicIntegrity Device has not been tampered with\n * @return {Promise}\n */\nexport const verifyAttestationResponse = (originalNonce, response) => {\n  const decodedResponse = JSON.parse(response.payload);\n  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {\n    return Promise.resolve(false);\n  }\n  return Promise.resolve(true);\n};\n\n/* eslint-disable arrow-body-style */\n/**\n * Wrapper for sendAttestationRequest and verifyAttestationResponse\n * @method sendAndVerifyAttestation\n * @param  {String} nonce  Randomly generated nonce\n * @param  {String} apiKey API key from Google APIs\n * @return {Promise}\n */\n\nexport const sendAndVerifyAttestation = (nonce, apiKey) => {\n  return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));\n};\n/* eslint-enable arrow-body-style */\n",
     "static": true,
     "longname": "/Users/rajiv/safetynet/src/index.js",
     "access": "public",
@@ -586,7 +586,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": null,
     "description": null,
-    "lineNumber": 6,
+    "lineNumber": 4,
     "undocument": true,
     "type": {
       "types": [
@@ -607,7 +607,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": null,
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 5,
     "undocument": true,
     "type": {
       "types": [
@@ -628,7 +628,7 @@
     "importPath": "react-native-google-safetynet",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 6,
     "undocument": true,
     "type": {
       "types": [
@@ -647,11 +647,11 @@
     "static": true,
     "longname": "src/index.js~isPlayServicesAvailable",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "react-native-google-safetynet",
-    "importStyle": null,
+    "importStyle": "{isPlayServicesAvailable}",
     "description": "Checks if Google Play Services is available and up to date",
-    "lineNumber": 15,
+    "lineNumber": 13,
     "unknown": [
       {
         "tagName": "@method",
@@ -666,8 +666,7 @@
       "spread": false,
       "description": ""
     },
-    "params": [],
-    "ignore": true
+    "params": []
   },
   {
     "__docId__": 53,
@@ -679,11 +678,11 @@
     "static": true,
     "longname": "src/index.js~generateNonce",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "react-native-google-safetynet",
-    "importStyle": null,
+    "importStyle": "{generateNonce}",
     "description": "Generate the nonce using react-native-securerandom",
-    "lineNumber": 25,
+    "lineNumber": 21,
     "unknown": [
       {
         "tagName": "@method",
@@ -709,8 +708,7 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 54,
@@ -722,11 +720,11 @@
     "static": true,
     "longname": "src/index.js~sendAttestationRequest",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "react-native-google-safetynet",
-    "importStyle": null,
+    "importStyle": "{sendAttestationRequest}",
     "description": "Send the attestation request",
-    "lineNumber": 39,
+    "lineNumber": 34,
     "unknown": [
       {
         "tagName": "@method",
@@ -762,8 +760,7 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 55,
@@ -775,11 +772,11 @@
     "static": true,
     "longname": "src/index.js~verifyAttestationResponse",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "react-native-google-safetynet",
-    "importStyle": null,
+    "importStyle": "{verifyAttestationResponse}",
     "description": "Verify the attestation response\nChecks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true\nIf any of those conditions are not met, an error is thrown",
-    "lineNumber": 58,
+    "lineNumber": 52,
     "unknown": [
       {
         "tagName": "@method",
@@ -845,8 +842,7 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
+    }
   },
   {
     "__docId__": 56,
@@ -858,11 +854,11 @@
     "static": true,
     "longname": "src/index.js~sendAndVerifyAttestation",
     "access": "public",
-    "export": false,
+    "export": true,
     "importPath": "react-native-google-safetynet",
-    "importStyle": null,
+    "importStyle": "{sendAndVerifyAttestation}",
     "description": "Wrapper for sendAttestationRequest and verifyAttestationResponse",
-    "lineNumber": 73,
+    "lineNumber": 69,
     "unknown": [
       {
         "tagName": "@method",
@@ -898,8 +894,7 @@
       ],
       "spread": false,
       "description": ""
-    },
-    "ignore": true
+    }
   },
   {
     "kind": "index",
@@ -911,7 +906,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.3.3\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\",\n    \"format\": \"prettier --write \\\"**/*.{js,json}\\\"\",\n    \"lint\": \"./node_modules/.bin/eslint .\",\n    \"precommit\": \"lint-staged\",\n    \"version\": \"./node_modules/.bin/auto-changelog -p\"\n  },\n  \"lint-staged\": {\n    \"*.{js,json}\": [\n      \"prettier --write\",\n      \"git add\"\n    ]\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"base64-js\": \"^1.3.0\",\n    \"jwt-decode\": \"^2.2.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"auto-changelog\": \"^1.8.0\",\n    \"babel-eslint\": \"9.0.0\",\n    \"esdoc\": \"1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"eslint\": \"5.9.0\",\n    \"eslint-config-airbnb-base\": \"13.1.0\",\n    \"eslint-config-prettier\": \"3.3.0\",\n    \"eslint-plugin-babel\": \"5.3.0\",\n    \"eslint-plugin-import\": \"2.14.0\",\n    \"eslint-plugin-prettier\": \"2.6.2\",\n    \"eslint-plugin-react-native\": \"3.3.0\",\n    \"husky\": \"0.14.3\",\n    \"lint-staged\": \"7.3.0\",\n    \"prettier\": \"1.15.2\",\n    \"react-native\": \"0.51.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"react-native-google-safetynet\",\n  \"version\": \"0.3.3\",\n  \"description\": \"React Native implementation for Google's SafetyNet API\",\n  \"author\": \"Rajiv Shah <rajivshah1@icloud.com>\",\n  \"license\": \"MIT\",\n  \"homepage\": \"https://github.com/rajivshah3/react-native-google-safetynet\",\n  \"bugs\": \"https://github.com/rajivshah3/react-native-google-safetynet/issues\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\",\n    \"docs\": \"./node_modules/.bin/esdoc\",\n    \"format\": \"prettier --write \\\"**/*.{js,json}\\\"\",\n    \"lint\": \"./node_modules/.bin/eslint .\",\n    \"precommit\": \"lint-staged\",\n    \"version\": \"./node_modules/.bin/auto-changelog -p\"\n  },\n  \"lint-staged\": {\n    \"*.{js,json}\": [\n      \"prettier --write\",\n      \"git add\"\n    ]\n  },\n  \"keywords\": [\n    \"react-native\",\n    \"safetynet\"\n  ],\n  \"peerDependencies\": {\n    \"react-native\": \"^0.48.0\"\n  },\n  \"dependencies\": {\n    \"base64-js\": \"^1.3.0\",\n    \"jwt-decode\": \"^2.2.0\",\n    \"react-native-securerandom\": \"^0.1.1\"\n  },\n  \"devDependencies\": {\n    \"auto-changelog\": \"^1.8.0\",\n    \"babel-eslint\": \"9.0.0\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"1.0.0\",\n    \"esdoc-standard-plugin\": \"1.0.0\",\n    \"eslint\": \"5.9.0\",\n    \"eslint-config-airbnb-base\": \"13.1.0\",\n    \"eslint-config-prettier\": \"3.3.0\",\n    \"eslint-plugin-babel\": \"5.3.0\",\n    \"eslint-plugin-import\": \"2.14.0\",\n    \"eslint-plugin-prettier\": \"2.6.2\",\n    \"eslint-plugin-react-native\": \"3.3.0\",\n    \"husky\": \"0.14.3\",\n    \"lint-staged\": \"7.3.0\",\n    \"prettier\": \"1.15.2\",\n    \"react-native\": \"0.51.0\"\n  }\n}\n",
     "longname": "/Users/rajiv/safetynet/package.json",
     "name": "package.json",
     "static": true,
