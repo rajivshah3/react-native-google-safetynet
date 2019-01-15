@@ -1032,9 +1032,9 @@ atob@^2.0.0:
   integrity sha512-SuiKH8vbsOyCALjA/+EINmt/Kdl+TQPrtFgW7XZZcwtryFu9e5kQoX3bjCW6mIvGH1fbeAZZuvwGR5IlBRznGw==
 
 auto-changelog@^1.8.0:
-  version "1.10.3"
-  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-1.10.3.tgz#498da9b1f8752c46c76684f26c3e43a3e0b07429"
-  integrity sha512-VBRDh7Xu0zzAQCMhFYPYx/Qma4y16n03Lol5ZKOYvFaU/68D26ohU7v1g9f2EGJ2Zp8YMcsuoX1d9G7l7t9qGw==
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-1.11.0.tgz#c302aa534892ee77df242862cd21717f51b1c54f"
+  integrity sha512-WvG2WBbPPYqAkqlF2SSKktdQ0jhOG37GvybrJxUKv4uxp/KVzqC0+ptgbcUJAbaFyLGEApbTtGS36K5vSC2jGQ==
   dependencies:
     "@babel/polyfill" "^7.0.0"
     commander "^2.19.0"
