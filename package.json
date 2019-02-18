@@ -39,7 +39,7 @@
     "esdoc": "1.1.0",
     "esdoc-ecmascript-proposal-plugin": "1.0.0",
     "esdoc-standard-plugin": "1.0.0",
-    "eslint": "5.13.0",
+    "eslint": "5.14.0",
     "eslint-config-airbnb-base": "13.1.0",
     "eslint-config-prettier": "4.0.0",
     "eslint-plugin-babel": "5.3.0",
