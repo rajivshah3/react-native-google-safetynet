@@ -5,7 +5,7 @@ import { generateSecureRandom } from 'react-native-securerandom';
 
 const { RNGoogleSafetyNet } = NativeModules;
 const base64js = require('base64-js');
-const jwtDecode  = require('jwt-decode');
+const jwtDecode = require('jwt-decode');
 
 /**
  * Checks if Google Play Services is available and up to date
