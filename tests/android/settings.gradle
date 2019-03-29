@@ -1,0 +1,3 @@
+rootProject.name = 'RNSafetyNetExample'
+
+include ':app'
