@@ -1,5 +1,42 @@
-extends: airbnb-base
+parser: babel-eslint
+extends:
+    - airbnb
+    - eslint:recommended
+    - plugin:react/recommended
+    - prettier/react
+    - prettier
+plugins:
+    - babel
+    - react
+    - jsx-a11y
 rules:
   import/extensions: off
   max-len: off
   arrow-parens: [2, "always"]
+  import/no-extraneous-dependencies: 0
+  import/prefer-default-export: 0
+  space-in-parens: [2, "never"]
+  jsx-a11y/alt-text: 0
+  jsx-a11y/label-has-for: 0
+  jsx-a11y/anchor-is-valid: 0
+  jsx-a11y/no-autofocus: 0
+  jsx-a11y/click-events-have-key-events: 0
+  jsx-a11y/no-static-element-interactions: 0
+  jsx-a11y/no-noninteractive-element-interactions: 0
+  react/default-props-match-prop-types: 0
+  react/forbid-prop-types: 0
+  react/jsx-equals-spacing: 2
+  react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }]
+  react/jsx-first-prop-new-line: [1, "multiline"]
+  react/jsx-indent: [2, 4]
+  react/jsx-wrap-multilines:
+      - 2
+      -
+          declaration: parens-new-line
+          assignment: parens-new-line
+          return: parens-new-line
+          arrow: parens-new-line
+          prop: ignore
+  react/no-array-index-key: 0
+  react/prefer-stateless-function: 0
+  react/require-default-props: 0
