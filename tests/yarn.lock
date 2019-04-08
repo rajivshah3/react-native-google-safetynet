@@ -4111,7 +4111,7 @@ react-is@^16.8.1:
   integrity sha512-sudt2uq5P/2TznPV4Wtdi+Lnq3yaYW8LfvPKLM9BKD8jJNBkxMVyB0C9/GmVhLw7Jbdmndk/73n7XQGeN9A3QQ==
 
 "react-native-google-safetynet@file:..":
-  version "0.3.3"
+  version "0.3.4"
   dependencies:
     base64-js "^1.3.0"
     jwt-decode "^2.2.0"
