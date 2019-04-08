@@ -8,6 +8,9 @@
 
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, View } from 'react-native';
+import SafetyNet from 'react-native-google-safetynet';
+
+const API_KEY = 'fakeAPIkey';
 
 const instructions = Platform.select({
     ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,6 +19,21 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+
+    componentDidMount() {
+      SafetyNet.isPlayServicesAvailable()
+          .then((result) => {
+              if (result === true) {
+                  return SafetyNet.generateNonce(24);
+              }
+
+              throw new Error('play services not available.');
+          })
+          .then((nonce) => SafetyNet.sendAndVerifyAttestation(nonce, API_KEY).then((isRooted) => {
+            // eslint-disable-next-line no-console
+            console.log(isRooted);
+          }));
+    }
     render() {
         return (
             <View style={styles.container}>
