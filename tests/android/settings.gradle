@@ -1,3 +1,6 @@
 rootProject.name = 'RNSafetyNetExample'
-
+include ':jet'
+project(':jet').projectDir = new File(rootProject.projectDir, '../node_modules/jet/android')
+include ':detox'
+project(':detox').projectDir = new File(rootProject.projectDir, '../node_modules/detox/android/detox')
 include ':app'
