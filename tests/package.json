@@ -7,8 +7,6 @@
     "prepare": "patch-package"
   },
   "dependencies": {
-    "detox": "10.0.13",
-    "jet": "^0.3.0",
     "mocha": "^5.2.0",
     "prop-types": "^15.6.1",
     "react": "16.6.3",
