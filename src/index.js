@@ -56,8 +56,7 @@ function sendAttestationRequest(nonce, apiKey) {
  * @return {Promise}
  */
 function verifyAttestationResponse(originalNonce, response) {
-  const decodedResponse = response;
-  if (originalNonce === decodedResponse.nonce && decodedResponse.ctsProfileMatch && decodedResponse.basicIntegrity) {
+  if (originalNonce === response.nonce && response.ctsProfileMatch && response.basicIntegrity) {
     return Promise.resolve(false);
   }
   return Promise.resolve(true);
