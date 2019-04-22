@@ -73,10 +73,24 @@ function sendAndVerifyAttestation(nonce, apiKey) {
   return sendAttestationRequest(nonce, apiKey).then((response) => verifyAttestationResponse(nonce, response));
 }
 
+/**
+ * Send the attestation request. Returns original JWT as result.
+ * @method sendAttestationRequestJWT
+ * @param  {String} nonce   Randomly generated nonce
+ * @param  {String} apiKey  API key from Google APIs
+ * @return {Promise}
+ */
+function sendAttestationRequestJWT(nonce, apiKey){
+  return RNGoogleSafetyNet.sendAttestationRequest(nonce, apiKey).then((result) => {    
+    return result;
+  });
+}
+
 export default {
   isPlayServicesAvailable,
   generateNonce,
   sendAttestationRequest,
   verifyAttestationResponse,
   sendAndVerifyAttestation,
+  sendAttestationRequestJWT
 };
