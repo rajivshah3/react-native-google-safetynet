@@ -9,7 +9,7 @@
     "main": "src/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "docs": "./node_modules/.bin/esdoc",
+        "docs": "./node_modules/.bin/documentation build -f html -o docs src/index.js",
         "format": "prettier --write \"**/*.{js,json}\"",
         "lint": "./node_modules/.bin/eslint .",
         "precommit": "lint-staged",
@@ -36,9 +36,7 @@
     "devDependencies": {
         "auto-changelog": "^1.8.0",
         "babel-eslint": "10.0.1",
-        "esdoc": "1.1.0",
-        "esdoc-ecmascript-proposal-plugin": "1.0.0",
-        "esdoc-standard-plugin": "1.0.0",
+        "documentation": "^11.0.0",
         "eslint": "5.15.3",
         "eslint-config-airbnb": "^17.1.0",
         "eslint-config-prettier": "4.3.0",

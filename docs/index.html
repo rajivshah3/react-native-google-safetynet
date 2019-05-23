@@ -1,75 +1,588 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <base data-ice="baseUrl">
-  <title data-ice="title">Home | react-native-google-safetynet</title>
-  <link type="text/css" rel="stylesheet" href="css/style.css">
-  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
-  <script src="script/prettify/prettify.js"></script>
-  <script src="script/manual.js"></script>
-<meta name="description" content="React Native implementation for Google&apos;s SafetyNet API"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="react-native-google-safetynet"><meta property="twitter:description" content="React Native implementation for Google&apos;s SafetyNet API"></head>
-<body class="layout-container" data-ice="rootContainer">
+  <meta charset='utf-8' />
+  <title>react-native-google-safetynet 0.3.4 | Documentation</title>
+  <meta name='description' content='React Native implementation for Google&#39;s SafetyNet API'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet' />
+  <link href='assets/style.css' rel='stylesheet' />
+  <link href='assets/github.css' rel='stylesheet' />
+  <link href='assets/split.css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>react-native-google-safetynet</h3>
+          <div class='mb1'><code>0.3.4</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#isplayservicesavailable'
+                  class="">
+                  isPlayServicesAvailable
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatenonce'
+                  class="">
+                  generateNonce
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sendattestationrequest'
+                  class="">
+                  sendAttestationRequest
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#verifyattestationresponse'
+                  class="">
+                  verifyAttestationResponse
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sendandverifyattestation'
+                  class="">
+                  sendAndVerifyAttestation
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sendattestationrequestjwt'
+                  class="">
+                  sendAttestationRequestJWT
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
 
-<header>
-  <a href="./">Home</a>
   
-  <a href="identifiers.html">Reference</a>
-  <a href="source.html">Source</a>
-  
-  <div class="search-box">
-  <span>
-    <img src="./image/search.png">
-    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
-  </span>
-    <ul class="search-result"></ul>
-  </div>
-</header>
-
-<nav class="navigation" data-ice="nav"><div>
-  <ul>
+  <div class='clearfix'>
     
-  </ul>
-</div>
-</nav>
+    <h3 class='fl m0' id='isplayservicesavailable'>
+      isPlayServicesAvailable
+    </h3>
+    
+    
+  </div>
+  
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="safetynet-for-react-native">SafetyNet for React Native</h1><p><a href="https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet"><img src="https://badge.fury.io/gh/rajivshah3%2Freact-native-google-safetynet.svg" alt="GitHub version"></a> <a href="https://codeclimate.com/github/rajivshah3/react-native-google-safetynet/maintainability"><img src="https://api.codeclimate.com/v1/badges/dfa536260a3131540826/maintainability" alt="Maintainability"></a> <a href="https://app.codacy.com/app/rajivshah3/react-native-google-safetynet?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rajivshah3/react-native-google-safetynet&amp;utm_campaign=badger"><img src="https://api.codacy.com/project/badge/Grade/de3c4e6e440f4cdf93492ddd5b41ace1" alt="Codacy Badge"></a>
-<a href="https://app.bitrise.io/app/6a320b4cec355721"><img src="https://app.bitrise.io/app/6a320b4cec355721/status.svg?token=CsqSRP-i2_BC8a2ne-7-pw&amp;branch=develop" alt="Build Status"></a></p>
-<h2 id="about-safetynet">About SafetyNet</h2><p>Google provides an API to verify device integrity and detect harmful apps. See the <a href="https://developer.android.com/training/safetynet/index.html">SafetyNet documentation</a> for more information.</p>
-<h2 id="getting-started">Getting started</h2><p><code>$ npm install react-native-google-safetynet --save</code></p>
-<p>or</p>
-<p><code>$ yarn add react-native-google-safetynet</code></p>
-<h3 id="mostly-automatic-installation">Mostly automatic installation</h3><p><code>$ react-native link react-native-google-safetynet</code></p>
-<h3 id="manual-installation">Manual installation</h3><h4 id="android">Android</h4><ol>
-<li>Open up <code>android/app/src/main/java/[...]/MainActivity.java</code><ul>
-<li>Add <code>import com.rajivshah.safetynet.RNGoogleSafetyNetPackage;</code> to the imports at the top of the file</li>
-<li>Add <code>new RNGoogleSafetyNetPackage()</code> to the list returned by the <code>getPackages()</code> method</li>
-</ul>
-</li>
-<li>Append the following lines to <code>android/settings.gradle</code>:<pre><code><code class="source-code prettyprint">   include &apos;:react-native-google-safetynet&apos;
-   project(&apos;:react-native-google-safetynet&apos;).projectDir = new File(rootProject.projectDir,     &apos;../node_modules/react-native-google-safetynet/android&apos;)</code>
-</code></pre></li>
-<li>Insert the following lines inside the dependencies block in <code>android/app/build.gradle</code>:<pre><code><code class="source-code prettyprint">   compile project(&apos;:react-native-google-safetynet&apos;)</code>
-</code></pre></li>
-</ol>
-<h2 id="usage">Usage</h2><p>See the full documentation <a href="https://rajivshah3.github.io/react-native-google-safetynet/">here</a></p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import RNGoogleSafetyNet from &apos;react-native-google-safetynet&apos;;
+  <p>Checks if Google Play Services is available and up to date</p>
 
-// TODO: What to do with the module?</code>
-</code></pre>
-</div>
-</div>
+    <div class='pre p1 fill-light mt0'>isPlayServicesAvailable(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
 
-<footer class="footer">
-  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
-</footer>
+  
+  
+  
+  
+  
+  
 
-<script src="script/search_index.js"></script>
-<script src="script/search.js"></script>
-<script src="script/pretty-print.js"></script>
-<script src="script/inherited-summary.js"></script>
-<script src="script/test-summary.js"></script>
-<script src="script/inner-link.js"></script>
-<script src="script/patch-for-local.js"></script>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatenonce'>
+      generateNonce
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generate the nonce using react-native-securerandom</p>
+
+    <div class='pre p1 fill-light mt0'>generateNonce(length: int): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>length</span> <code class='quiet'>(int)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sendattestationrequest'>
+      sendAttestationRequest
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Send the attestation request</p>
+
+    <div class='pre p1 fill-light mt0'>sendAttestationRequest(nonce: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, apiKey: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nonce</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    Randomly generated nonce
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>apiKey</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    API key from Google APIs
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='verifyattestationresponse'>
+      verifyAttestationResponse
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Verify the attestation response
+Checks if the original nonce matches the nonce in the response, ctsProfileMatch is true, and basicIntegrity is true
+If any of those conditions are not met, an error is thrown</p>
+
+    <div class='pre p1 fill-light mt0'>verifyAttestationResponse(originalNonce: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, response: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>originalNonce</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    Nonce originally provided to sendAttestationRequest
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>response</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a>)</code>
+	    Response from sendAttestationRequest
+
+          </div>
+          
+          <table class='mt1 mb2 fixed-table h5 col-12'>
+            <colgroup>
+              <col width='30%' />
+              <col width='70%' />
+            </colgroup>
+            <thead>
+              <tr class='bold fill-light'>
+                <th>Name</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody class='mt1'>
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>response.nonce</span> <code class='quiet'><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>
+  </td>
+  <td class='break-word'><span>Nonce in response from sendAttestationRequest
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>response.ctsProfileMatch</span> <code class='quiet'>bool</code>
+  </td>
+  <td class='break-word'><span>Device matches a device that has passed Android Compatibility Testing
+</span></td>
+</tr>
+
+
+              
+                <tr>
+  <td class='break-word'><span class='code bold'>response.basicIntegrity</span> <code class='quiet'>bool</code>
+  </td>
+  <td class='break-word'><span>Device has not been tampered with
+</span></td>
+</tr>
+
+
+              
+            </tbody>
+          </table>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sendandverifyattestation'>
+      sendAndVerifyAttestation
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Wrapper for sendAttestationRequest and verifyAttestationResponse</p>
+
+    <div class='pre p1 fill-light mt0'>sendAndVerifyAttestation(nonce: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, apiKey: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nonce</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    Randomly generated nonce
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>apiKey</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    API key from Google APIs
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sendattestationrequestjwt'>
+      sendAttestationRequestJWT
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Send the attestation request. Returns original JWT as result.</p>
+
+    <div class='pre p1 fill-light mt0'>sendAttestationRequestJWT(nonce: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>, apiKey: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>nonce</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    Randomly generated nonce
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>apiKey</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    API key from Google APIs
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
 </body>
 </html>
