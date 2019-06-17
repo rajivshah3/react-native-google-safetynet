@@ -35,7 +35,7 @@
     },
     "devDependencies": {
         "auto-changelog": "^1.8.0",
-        "babel-eslint": "10.0.1",
+        "babel-eslint": "10.0.2",
         "documentation": "^11.0.0",
         "eslint": "5.15.3",
         "eslint-config-airbnb": "^17.1.0",
