@@ -49,6 +49,6 @@
         "husky": "2.7.0",
         "lint-staged": "8.2.1",
         "prettier": "1.18.2",
-        "react-native": "0.57.8"
+        "react-native": "0.59.9"
     }
 }
