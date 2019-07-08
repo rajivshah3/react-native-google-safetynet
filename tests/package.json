@@ -11,7 +11,7 @@
     "prop-types": "^15.6.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-native": "0.57.8",
+    "react-native": "0.58.6",
     "react-native-google-safetynet": "file:..",
     "require-all": "3.0.0",
     "should": "^13.2.3",
