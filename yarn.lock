@@ -1519,9 +1519,9 @@ atob@^2.0.0:
   integrity sha512-SuiKH8vbsOyCALjA/+EINmt/Kdl+TQPrtFgW7XZZcwtryFu9e5kQoX3bjCW6mIvGH1fbeAZZuvwGR5IlBRznGw==
 
 auto-changelog@^1.8.0:
-  version "1.14.0"
-  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-1.14.0.tgz#278c60af2851d8322656ef8c79733b41dfda3824"
-  integrity sha512-+FyuC5FNYoEU5DsGABD87SRfUHvsswINMi3ON0QdeT838/1gdV7R1GoZSsk7Ll2JRXnZkBOuKbeuPQKTIEafPw==
+  version "1.14.1"
+  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-1.14.1.tgz#182f4311b8308be27c64f4e4c0901c7be37ea34e"
+  integrity sha512-T98ndHOvMQFz+TCqCi/Tw9jDVgRwECrtB2pkEM8N9snuqZDYPD9QJMRSCt1jr4pOKjvge3Ay2jaMeCpif+hHpw==
   dependencies:
     commander "^2.20.0"
     core-js "^3.1.4"
@@ -1529,6 +1529,7 @@ auto-changelog@^1.8.0:
     lodash.uniqby "^4.7.0"
     node-fetch "^2.6.0"
     parse-github-url "^1.0.2"
+    regenerator-runtime "^0.13.2"
     semver "^6.1.1"
 
 axobject-query@^2.0.2:
