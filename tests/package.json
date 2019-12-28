@@ -19,7 +19,7 @@
     "sinon": "^7.4.1"
   },
   "devDependencies": {
-    "babel-plugin-istanbul": "^5.2.0",
+    "babel-plugin-istanbul": "^6.0.0",
     "metro-config": "^0.53.1",
     "patch-package": "^6.2.0"
   },
