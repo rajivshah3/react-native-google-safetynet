@@ -7,7 +7,7 @@
     "prepare": "patch-package"
   },
   "dependencies": {
-    "mocha": "^6.2.2",
+    "mocha": "^7.1.0",
     "prop-types": "^15.6.1",
     "react": "16.6.3",
     "react-dom": "16.6.3",
