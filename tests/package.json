@@ -21,7 +21,7 @@
   "devDependencies": {
     "babel-plugin-istanbul": "^6.0.0",
     "metro-config": "^0.53.1",
-    "patch-package": "^6.2.0"
+    "patch-package": "^6.2.1"
   },
   "detox": {
     "test-runner": "mocha",
