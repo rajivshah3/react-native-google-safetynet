@@ -34,7 +34,7 @@
         "react-native-securerandom": "^0.1.1"
     },
     "devDependencies": {
-        "auto-changelog": "^1.8.0",
+        "auto-changelog": "^2.0.0",
         "babel-eslint": "10.0.3",
         "documentation": "^12.0.0",
         "eslint": "5.16.0",
