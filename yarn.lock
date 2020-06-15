@@ -1604,9 +1604,9 @@ atob@^2.0.0:
   integrity sha512-SuiKH8vbsOyCALjA/+EINmt/Kdl+TQPrtFgW7XZZcwtryFu9e5kQoX3bjCW6mIvGH1fbeAZZuvwGR5IlBRznGw==
 
 auto-changelog@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-2.0.0.tgz#bfae79668394e3fd3be90cb59c1abcdcf750f458"
-  integrity sha512-A61Oc4A/5L5OlMs+AEQNgy8/sOn5Eu0I2Sw4+qbwk40y6kh+2wmptoY4b30FHlduPh3ghybB94eIVFKkAZtjzg==
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/auto-changelog/-/auto-changelog-2.1.0.tgz#c186466f26dd1ac8c6b09c09596a676891a42dbe"
+  integrity sha512-4Bwv4eyy5PUpYkeWX0XfoItbV2tKHNIzO473U+RMkj2hWXm1EtAeyZyFh2atccPqrhn/PBmhk3g9GLDxkltxXQ==
   dependencies:
     commander "^5.0.0"
     handlebars "^4.7.3"
