@@ -81,7 +81,12 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   public void sendAttestationRequest(String nonceString, String apiKey, final Promise promise){
     byte[] nonce;
     Activity activity;
-    nonce = stringToBytes(nonceString);
+    try {
+      nonce = stringToBytes(nonceString);
+    } catch(IllegalArgumentException e) {
+      promise.reject("Could not decode nonce to bytes", e);
+      return;
+    }
     activity = getCurrentActivity();
     SafetyNet.getClient(baseContext).attest(nonce, apiKey)
     .addOnSuccessListener(activity,
