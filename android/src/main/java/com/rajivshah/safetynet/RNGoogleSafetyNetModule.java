@@ -1,7 +1,7 @@
 
 package com.rajivshah.safetynet;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.app.Activity;
 import android.util.Log;
 import android.util.Base64;
