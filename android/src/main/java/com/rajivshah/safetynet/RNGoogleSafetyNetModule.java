@@ -5,6 +5,8 @@ import android.support.annotation.NonNull;
 import android.app.Activity;
 import android.util.Log;
 import android.util.Base64;
+import android.content.DialogInterface;
+import android.content.DialogInterface.*;
 
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
@@ -61,9 +63,16 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
   */
   @ReactMethod
   public void isPlayServicesAvailable(final Promise promise){
+    Activity activity;
+    int errorCode;
+    activity = getCurrentActivity();
     ConnectionResult result = new ConnectionResult(GoogleApiAvailability.getInstance().isGooglePlayServicesAvailable(baseContext));
+    int errorCode = result.getErrorCode();
     if (result.isSuccess()){
       promise.resolve(true);
+    }
+    else if (GoogleApiAvailability.getInstance().isUserResolvableError(errorCode)){
+      handlePlayServicesError(activity, result, promise);
     }
     else {
       promise.reject(result.getErrorMessage());
@@ -202,6 +211,19 @@ public class RNGoogleSafetyNetModule extends ReactContextBaseJavaModule {
     String string;
     string = new String(bytes, StandardCharsets.UTF_8);
     return string;
+  }
+
+  private void handlePlayServicesError(Activity activity, ConnectionResult result, Promise promise){
+    int errorCode;
+    Dialog errorDialog;
+    errorCode = result.getErrorCode();
+    errorDialog = GoogleApiAvailability.getInstance().getErrorDialog(activity, errorCode, PLAY_SERVICES_RESOLUTION_REQUEST);
+    dialog.show();
+    dialog.setOnCancelListener(new OnCancelListener () {
+      public void onCancel(DialogInterface dialog){
+        promise.reject(result.getErrorMessage());
+      }
+    });
   }
 
 }
