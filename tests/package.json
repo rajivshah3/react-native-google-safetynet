@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^6.0.0",
-    "metro-config": "^0.53.1",
+    "metro-config": "^0.66.0",
     "patch-package": "^6.2.2"
   },
   "detox": {
